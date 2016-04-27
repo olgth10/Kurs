@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Kurs
+namespace Kurs.Forms
 {
-    public partial class Form1 : Form
+    public partial class AddCR : Form
     {
-        public Form1()
+        public AddCR()
         {
             InitializeComponent();
         }

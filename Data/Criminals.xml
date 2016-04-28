@@ -1,1 +1,39 @@
-﻿<?xml version="1.0" encoding="utf-8" ?> 
+﻿<?xml version="1.0" encoding="utf-8"?>
+<criminals>
+  <criminal>
+    <surname>Пупкин</surname>
+    <nickname>Репка</nickname>
+    <height>1,90</height>
+    <hair>menuStrip1</hair>
+    <eyes>menuStrip2</eyes>
+    <signs>
+    </signs>
+    <nationality>menuStrip3</nationality>
+    <dob>1 апреля 2016 г.</dob>
+    <pob>menuStrip4</pob>
+    <lastlocation>menuStrip6</lastlocation>
+    <languages>menuStrip5</languages>
+    <professions>menuStrip7</professions>
+    <lastdeal>
+    </lastdeal>
+  </criminal>
+  <criminal>
+    <surname>
+    </surname>
+    <nickname>
+    </nickname>
+    <height>1</height>
+    <hair>menuStrip1</hair>
+    <eyes>menuStrip2</eyes>
+    <signs>
+    </signs>
+    <nationality>menuStrip3</nationality>
+    <dob>29 апреля 2016 г.</dob>
+    <pob>menuStrip4</pob>
+    <lastlocation>menuStrip6</lastlocation>
+    <languages>menuStrip5</languages>
+    <professions>menuStrip7</professions>
+    <lastdeal>
+    </lastdeal>
+  </criminal>
+</criminals>

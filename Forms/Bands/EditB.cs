@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Kurs.Forms
+namespace Kurs.Forms.Bands
 {
-    public partial class AddCR : Form
+    public partial class EditB : Form
     {
-        public AddCR()
+        public EditB()
         {
             InitializeComponent();
         }

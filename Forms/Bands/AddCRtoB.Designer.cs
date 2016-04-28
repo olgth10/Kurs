@@ -1,6 +1,6 @@
-﻿namespace Kurs.Forms
+﻿namespace Kurs.Forms.Bands
 {
-    partial class FindCR
+    partial class AddCRtoB
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Поиск преступников";
+            this.Text = "AddCRtoB";
         }
 
         #endregion

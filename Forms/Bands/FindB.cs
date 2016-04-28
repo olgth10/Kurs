@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Kurs.Forms
+namespace Kurs.Forms.Bands
 {
-    public partial class DeleteCR : Form
+    public partial class FindB : Form
     {
-        public DeleteCR()
+        public FindB()
         {
             InitializeComponent();
         }

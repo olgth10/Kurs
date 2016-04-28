@@ -7,14 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Kurs.Forms.Criminal;
+using Kurs.Forms.Bands;
 using Kurs.Models;
-using Kurs.Forms;
 
-namespace Kurs.Forms
+namespace Kurs.Forms.Criminal
 {
-    public partial class List : Form
+    public partial class ListCR : Form
     {
-        public List()
+        public ListCR()
         {
             InitializeComponent();
         }
@@ -28,13 +29,26 @@ namespace Kurs.Forms
         private void button2_Click(object sender, EventArgs e)
         {
             EditCR edit = new EditCR();
-            edit.Show();
+            if (edit.ShowDialog() == DialogResult.OK)
+            {
+                listBox1.Items.Add(edit.DialogResult);
+                edit.Close();
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             DeleteCR del = new DeleteCR();
-            del.Show();
+            if (del.ShowDialog() == DialogResult.Yes)
+            {
+                listBox1.Items.Add(del.DialogResult);
+                del.Close();
+            }
+            else
+            {
+                listBox1.Items.Add(del.DialogResult);
+                del.Close();
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)

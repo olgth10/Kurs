@@ -45,51 +45,99 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\AddCR.cs">
+    <Compile Include="Forms\Bands\AddB.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AddCR.Designer.cs">
+    <Compile Include="Forms\Bands\AddB.Designer.cs">
+      <DependentUpon>AddB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bands\AddCRtoB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bands\AddCRtoB.Designer.cs">
+      <DependentUpon>AddCRtoB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bands\EditB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bands\EditB.Designer.cs">
+      <DependentUpon>EditB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bands\FindB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bands\FindB.Designer.cs">
+      <DependentUpon>FindB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bands\FindCRinB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bands\FindCRinB.Designer.cs">
+      <DependentUpon>FindCRinB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bands\ListB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bands\ListB.Designer.cs">
+      <DependentUpon>ListB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Criminal\AddCR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Criminal\AddCR.Designer.cs">
       <DependentUpon>AddCR.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\EditCR.cs">
+    <Compile Include="Forms\Criminal\EditCR.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\EditCR.Designer.cs">
+    <Compile Include="Forms\Criminal\EditCR.Designer.cs">
       <DependentUpon>EditCR.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FindCR.cs">
+    <Compile Include="Forms\Criminal\FindCR.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FindCR.Designer.cs">
+    <Compile Include="Forms\Criminal\FindCR.Designer.cs">
       <DependentUpon>FindCR.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\DeleteCR.cs">
+    <Compile Include="Forms\Criminal\DeleteCR.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\DeleteCR.Designer.cs">
+    <Compile Include="Forms\Criminal\DeleteCR.Designer.cs">
       <DependentUpon>DeleteCR.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ArchivCR.cs">
+    <Compile Include="Forms\Criminal\ArchivCR.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ArchivCR.Designer.cs">
+    <Compile Include="Forms\Criminal\ArchivCR.Designer.cs">
       <DependentUpon>ArchivCR.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\List.cs">
+    <Compile Include="Forms\Criminal\ListCR.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\List.Designer.cs">
-      <DependentUpon>List.cs</DependentUpon>
+    <Compile Include="Forms\Criminal\ListCR.Designer.cs">
+      <DependentUpon>ListCR.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Band.cs" />
     <Compile Include="Models\Criminal.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\AddCR.resx">
+    <EmbeddedResource Include="Forms\Criminal\AddCR.resx">
       <DependentUpon>AddCR.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\List.resx">
-      <DependentUpon>List.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Criminal\ArchivCR.resx">
+      <DependentUpon>ArchivCR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Criminal\DeleteCR.resx">
+      <DependentUpon>DeleteCR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Criminal\EditCR.resx">
+      <DependentUpon>EditCR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Criminal\FindCR.resx">
+      <DependentUpon>FindCR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Criminal\ListCR.resx">
+      <DependentUpon>ListCR.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -118,6 +166,7 @@
     <Content Include="Data\Bands.xml" />
     <Content Include="Data\Criminals.xml" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

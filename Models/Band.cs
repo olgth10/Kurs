@@ -31,6 +31,6 @@ namespace Kurs.Models
 
         }
         #endregion
-
+        
     }
 }

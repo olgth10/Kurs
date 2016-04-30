@@ -12,20 +12,20 @@ namespace Kurs.Models
         public string name;
         public string surname;
         public string nickname;
-        public decimal heigth;
+        public double heigth;
         public string hair;
         public string eyes;
         public string signs;
         public string nationality;
-        public string dob;
+        public DateTime dob;
         public string pob;
         public string lastlocation;
-        public string languages;
+        public string languages;        
         public string professions;
         public string lastdeal;
 
         #region Конструктор
-        public Criminal(string name1,string surname1,string nickname1,decimal heigth1,string hair1,string eyes1,string signs1,string nationality1,string dob1,string pob1,string lastlocation1,string languages1,string professions1,string lastdeal1)
+        public Criminal(string name1,string surname1,string nickname1,double heigth1,string hair1,string eyes1,string signs1,string nationality1,DateTime dob1,string pob1, string lastlocation1, string languages1, string professions1,string lastdeal1)
         {
             name = name1;
             surname = surname1;
@@ -53,6 +53,7 @@ namespace Kurs.Models
             XmlElement tag = doc.CreateElement("name");
             XmlElement crim = doc.CreateElement("criminal");
             tag.InnerText = name;
+            crim.AppendChild(tag);
             
             tag = doc.CreateElement("surname");
             tag.InnerText = surname;
@@ -84,7 +85,7 @@ namespace Kurs.Models
             crim.AppendChild(tag);
 
             tag = doc.CreateElement("dob");
-            tag.InnerText = dob;
+            tag.InnerText = dob.ToString();
             crim.AppendChild(tag);
 
             tag = doc.CreateElement("pob");
@@ -120,16 +121,31 @@ namespace Kurs.Models
         #endregion
 
         #region Изменение данных преступника
-        public void Edit()
+        public void Edit(int a)
         {
-
+            XmlDocument doc = new XmlDocument();
+            doc.Load(@"../../Data/Criminals.xml");
+            XmlNode root = doc.DocumentElement;
+            root.RemoveChild(root.ChildNodes[a]);
+            doc.Save(@"../../Data/Criminals.xml");
         }
         #endregion
 
         #region Удаление преступника
         public void Delete()
         {
-
+            XmlDocument doc = new XmlDocument();
+            Lists crl = new Lists();
+            doc.Load(@"../../Data/Criminals.xml");
+            XmlNode root = doc.DocumentElement;
+            for (int i = 0; i < crl.ls.Count; i++)
+            {
+                if (crl.ls[i].ToString() == this.ToString())
+                {
+                    root.RemoveChild(root.ChildNodes[i]);
+                }
+            }  
+            doc.Save(@"../../Data/Criminals.xml");
         }
         #endregion
 
@@ -140,5 +156,9 @@ namespace Kurs.Models
         }
         #endregion
 
+        public override string ToString()
+        {
+            return $"Имя: {name}  Фамилия: {surname}   Кличка: {nickname} Рост: {heigth} м.  Цвет волос: {hair}   Цвет глаз: {eyes} Особые приметы: {signs}  Гражданство: {nationality}   Дата рождения: {dob} Место рождения: {pob} Последнее место: {lastlocation} Языки: {languages} Преступная профессия: {professions} Последнее дело: {lastdeal}";
+        }
     }
 }

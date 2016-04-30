@@ -119,6 +119,7 @@
     </Compile>
     <Compile Include="Models\Band.cs" />
     <Compile Include="Models\Criminal.cs" />
+    <Compile Include="Models\Lists.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\Criminal\AddCR.resx">
@@ -164,7 +165,9 @@
   <ItemGroup>
     <Content Include="Data\Archive.xml" />
     <Content Include="Data\Bands.xml" />
-    <Content Include="Data\Criminals.xml" />
+    <Content Include="Data\Criminals.xml">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

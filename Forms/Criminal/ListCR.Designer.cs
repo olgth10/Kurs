@@ -90,14 +90,14 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(12, 41);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(860, 537);
+            this.listBox1.Size = new System.Drawing.Size(1252, 537);
             this.listBox1.TabIndex = 11;
             // 
             // ListCR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(881, 592);
+            this.ClientSize = new System.Drawing.Size(1276, 997);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -106,6 +106,7 @@
             this.Controls.Add(this.listBox1);
             this.Name = "ListCR";
             this.Text = "Картотека Интерпола";
+            this.Load += new System.EventHandler(this.ListCR_Load);
             this.ResumeLayout(false);
 
         }

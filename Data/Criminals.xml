@@ -1,39 +1,83 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <criminals>
   <criminal>
+    <name>Вася</name>
     <surname>Пупкин</surname>
     <nickname>Репка</nickname>
-    <height>1,90</height>
-    <hair>menuStrip1</hair>
-    <eyes>menuStrip2</eyes>
-    <signs>
-    </signs>
-    <nationality>menuStrip3</nationality>
-    <dob>1 апреля 2016 г.</dob>
-    <pob>menuStrip4</pob>
-    <lastlocation>menuStrip6</lastlocation>
-    <languages>menuStrip5</languages>
-    <professions>menuStrip7</professions>
-    <lastdeal>
-    </lastdeal>
+    <height>1,9</height>
+    <hair>Брюнет</hair>
+    <eyes>Голубой</eyes>
+    <signs>Шрам на щеке</signs>
+    <nationality>Россия</nationality>
+    <dob>01.04.2016 12:57:50</dob>
+    <pob>Харьков, Украина</pob>
+    <lastlocation>Харьков</lastlocation>
+    <languages>Русский</languages>
+    <professions>Вор</professions>
+    <lastdeal>Кража в супермаркете</lastdeal>
   </criminal>
   <criminal>
-    <surname>
-    </surname>
-    <nickname>
-    </nickname>
-    <height>1</height>
-    <hair>menuStrip1</hair>
-    <eyes>menuStrip2</eyes>
-    <signs>
-    </signs>
-    <nationality>menuStrip3</nationality>
-    <dob>29 апреля 2016 г.</dob>
-    <pob>menuStrip4</pob>
-    <lastlocation>menuStrip6</lastlocation>
-    <languages>menuStrip5</languages>
-    <professions>menuStrip7</professions>
-    <lastdeal>
-    </lastdeal>
+    <name>name0</name>
+    <surname>surname0</surname>
+    <nickname>nickname0</nickname>
+    <height>1,5</height>
+    <hair>hair0</hair>
+    <eyes>eyes0</eyes>
+    <signs>signs0</signs>
+    <nationality>nationality0</nationality>
+    <dob>30.04.2016 13:50:00</dob>
+    <pob>pob0</pob>
+    <lastlocation>lastloc0</lastlocation>
+    <languages>languages0</languages>
+    <professions>prof0</professions>
+    <lastdeal>lastdeal0</lastdeal>
+  </criminal>
+  <criminal>
+    <name>name1</name>
+    <surname>surname1</surname>
+    <nickname>nickname1</nickname>
+    <height>1,5</height>
+    <hair>hair1</hair>
+    <eyes>eyes1</eyes>
+    <signs>signs1</signs>
+    <nationality>nationality1</nationality>
+    <dob>30.04.2016 13:50:00</dob>
+    <pob>pob1</pob>
+    <lastlocation>lastloc1</lastlocation>
+    <languages>languages1</languages>
+    <professions>prof1</professions>
+    <lastdeal>lastdeal1</lastdeal>
+  </criminal>
+  <criminal>
+    <name>name2</name>
+    <surname>surname2</surname>
+    <nickname>nickname2</nickname>
+    <height>1,5</height>
+    <hair>hair2</hair>
+    <eyes>eyes2</eyes>
+    <signs>signs2</signs>
+    <nationality>nationality2</nationality>
+    <dob>30.04.2016 13:50:00</dob>
+    <pob>pob2</pob>
+    <lastlocation>lastloc2</lastlocation>
+    <languages>languages2</languages>
+    <professions>prof2</professions>
+    <lastdeal>lastdeal2</lastdeal>
+  </criminal>
+  <criminal>
+    <name>name3</name>
+    <surname>surname3</surname>
+    <nickname>nickname3</nickname>
+    <height>1,5</height>
+    <hair>hair3</hair>
+    <eyes>eyes3</eyes>
+    <signs>signs3</signs>
+    <nationality>nationality3</nationality>
+    <dob>30.04.2016 13:50:00</dob>
+    <pob>pob3</pob>
+    <lastlocation>lastloc3</lastlocation>
+    <languages>languages3</languages>
+    <professions>prof3</professions>
+    <lastdeal>lastdeal3</lastdeal>
   </criminal>
 </criminals>

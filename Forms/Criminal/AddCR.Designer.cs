@@ -36,8 +36,6 @@
             this.surname = new System.Windows.Forms.TextBox();
             this.nickname = new System.Windows.Forms.TextBox();
             this.menu1 = new System.Windows.Forms.MenuStrip();
-            this.цветВолосToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.hairs = new System.Windows.Forms.ToolStripTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.menu2 = new System.Windows.Forms.MenuStrip();
@@ -51,27 +49,22 @@
             this.label14 = new System.Windows.Forms.Label();
             this.signs = new System.Windows.Forms.TextBox();
             this.menu3 = new System.Windows.Forms.MenuStrip();
-            this.гражданствоToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nationality = new System.Windows.Forms.ToolStripTextBox();
             this.menu4 = new System.Windows.Forms.MenuStrip();
-            this.местоРожденияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripTextBox4 = new System.Windows.Forms.ToolStripTextBox();
             this.menu5 = new System.Windows.Forms.MenuStrip();
-            this.языкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripTextBox5 = new System.Windows.Forms.ToolStripTextBox();
             this.menu6 = new System.Windows.Forms.MenuStrip();
-            this.последнееМестоToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripTextBox6 = new System.Windows.Forms.ToolStripTextBox();
             this.menu7 = new System.Windows.Forms.MenuStrip();
-            this.преступнаяПрофессияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripTextBox7 = new System.Windows.Forms.ToolStripTextBox();
             this.lastdeal = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.heigth = new System.Windows.Forms.NumericUpDown();
             this.label15 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.цветГлазToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eyes = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
+            this.toolStripComboBox2 = new System.Windows.Forms.ToolStripComboBox();
+            this.toolStripComboBox3 = new System.Windows.Forms.ToolStripComboBox();
+            this.toolStripComboBox4 = new System.Windows.Forms.ToolStripComboBox();
+            this.toolStripComboBox5 = new System.Windows.Forms.ToolStripComboBox();
+            this.toolStripComboBox6 = new System.Windows.Forms.ToolStripComboBox();
+            this.toolStripComboBox7 = new System.Windows.Forms.ToolStripComboBox();
             this.menu1.SuspendLayout();
             this.menu2.SuspendLayout();
             this.menu3.SuspendLayout();
@@ -124,7 +117,7 @@
             // 
             // name
             // 
-            this.name.Location = new System.Drawing.Point(220, 9);
+            this.name.Location = new System.Drawing.Point(220, 10);
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(170, 20);
             this.name.TabIndex = 1;
@@ -138,7 +131,7 @@
             // 
             // nickname
             // 
-            this.nickname.Location = new System.Drawing.Point(220, 61);
+            this.nickname.Location = new System.Drawing.Point(220, 60);
             this.nickname.Name = "nickname";
             this.nickname.Size = new System.Drawing.Size(170, 20);
             this.nickname.TabIndex = 3;
@@ -148,30 +141,13 @@
             this.menu1.AutoSize = false;
             this.menu1.Dock = System.Windows.Forms.DockStyle.None;
             this.menu1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.цветВолосToolStripMenuItem});
-            this.menu1.Location = new System.Drawing.Point(220, 113);
+            this.toolStripComboBox1});
+            this.menu1.Location = new System.Drawing.Point(220, 110);
             this.menu1.Name = "menu1";
             this.menu1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
             this.menu1.Size = new System.Drawing.Size(170, 25);
             this.menu1.TabIndex = 5;
             this.menu1.Text = "menuStrip1";
-            // 
-            // цветВолосToolStripMenuItem
-            // 
-            this.цветВолосToolStripMenuItem.AutoSize = false;
-            this.цветВолосToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control;
-            this.цветВолосToolStripMenuItem.CheckOnClick = true;
-            this.цветВолосToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.hairs});
-            this.цветВолосToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.цветВолосToolStripMenuItem.Name = "цветВолосToolStripMenuItem";
-            this.цветВолосToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
-            this.цветВолосToolStripMenuItem.Text = "Цвет волос";
-            // 
-            // hairs
-            // 
-            this.hairs.Name = "hairs";
-            this.hairs.Size = new System.Drawing.Size(100, 23);
             // 
             // label5
             // 
@@ -198,7 +174,7 @@
             this.menu2.AutoSize = false;
             this.menu2.Dock = System.Windows.Forms.DockStyle.None;
             this.menu2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.цветГлазToolStripMenuItem});
+            this.toolStripComboBox2});
             this.menu2.Location = new System.Drawing.Point(220, 139);
             this.menu2.Name = "menu2";
             this.menu2.Size = new System.Drawing.Size(170, 25);
@@ -228,7 +204,7 @@
             // label9
             // 
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(12, 239);
+            this.label9.Location = new System.Drawing.Point(12, 250);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(190, 25);
             this.label9.TabIndex = 15;
@@ -238,7 +214,7 @@
             // label10
             // 
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(12, 214);
+            this.label10.Location = new System.Drawing.Point(12, 222);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(190, 25);
             this.label10.TabIndex = 16;
@@ -248,7 +224,7 @@
             // label11
             // 
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.Location = new System.Drawing.Point(12, 264);
+            this.label11.Location = new System.Drawing.Point(12, 310);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(190, 25);
             this.label11.TabIndex = 17;
@@ -258,7 +234,7 @@
             // label12
             // 
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.Location = new System.Drawing.Point(12, 289);
+            this.label12.Location = new System.Drawing.Point(12, 280);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(190, 25);
             this.label12.TabIndex = 18;
@@ -268,7 +244,7 @@
             // label13
             // 
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label13.Location = new System.Drawing.Point(12, 314);
+            this.label13.Location = new System.Drawing.Point(12, 340);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(190, 25);
             this.label13.TabIndex = 19;
@@ -278,9 +254,9 @@
             // label14
             // 
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label14.Location = new System.Drawing.Point(12, 339);
+            this.label14.Location = new System.Drawing.Point(12, 374);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(190, 25);
+            this.label14.Size = new System.Drawing.Size(190, 20);
             this.label14.TabIndex = 20;
             this.label14.Text = "Последнее дело";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -297,141 +273,71 @@
             this.menu3.AutoSize = false;
             this.menu3.Dock = System.Windows.Forms.DockStyle.None;
             this.menu3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.гражданствоToolStripMenuItem});
+            this.toolStripComboBox3});
             this.menu3.Location = new System.Drawing.Point(220, 189);
             this.menu3.Name = "menu3";
             this.menu3.Size = new System.Drawing.Size(170, 25);
             this.menu3.TabIndex = 8;
             this.menu3.Text = "menuStrip3";
             // 
-            // гражданствоToolStripMenuItem
-            // 
-            this.гражданствоToolStripMenuItem.CheckOnClick = true;
-            this.гражданствоToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.nationality});
-            this.гражданствоToolStripMenuItem.Name = "гражданствоToolStripMenuItem";
-            this.гражданствоToolStripMenuItem.Size = new System.Drawing.Size(90, 21);
-            this.гражданствоToolStripMenuItem.Text = "Гражданство";
-            // 
-            // nationality
-            // 
-            this.nationality.Name = "nationality";
-            this.nationality.Size = new System.Drawing.Size(100, 23);
-            // 
             // menu4
             // 
             this.menu4.AutoSize = false;
             this.menu4.Dock = System.Windows.Forms.DockStyle.None;
             this.menu4.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.местоРожденияToolStripMenuItem});
-            this.menu4.Location = new System.Drawing.Point(220, 242);
+            this.toolStripComboBox4});
+            this.menu4.Location = new System.Drawing.Point(220, 250);
             this.menu4.Name = "menu4";
             this.menu4.Size = new System.Drawing.Size(170, 25);
             this.menu4.TabIndex = 10;
             this.menu4.Text = "menuStrip4";
-            // 
-            // местоРожденияToolStripMenuItem
-            // 
-            this.местоРожденияToolStripMenuItem.CheckOnClick = true;
-            this.местоРожденияToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripTextBox4});
-            this.местоРожденияToolStripMenuItem.Name = "местоРожденияToolStripMenuItem";
-            this.местоРожденияToolStripMenuItem.Size = new System.Drawing.Size(112, 21);
-            this.местоРожденияToolStripMenuItem.Text = "Место рождения";
-            // 
-            // toolStripTextBox4
-            // 
-            this.toolStripTextBox4.Name = "toolStripTextBox4";
-            this.toolStripTextBox4.Size = new System.Drawing.Size(100, 23);
             // 
             // menu5
             // 
             this.menu5.AutoSize = false;
             this.menu5.Dock = System.Windows.Forms.DockStyle.None;
             this.menu5.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.языкиToolStripMenuItem});
-            this.menu5.Location = new System.Drawing.Point(220, 266);
+            this.toolStripComboBox5});
+            this.menu5.Location = new System.Drawing.Point(220, 280);
             this.menu5.Name = "menu5";
             this.menu5.Size = new System.Drawing.Size(170, 25);
             this.menu5.TabIndex = 11;
             this.menu5.Text = "menuStrip5";
-            // 
-            // языкиToolStripMenuItem
-            // 
-            this.языкиToolStripMenuItem.CheckOnClick = true;
-            this.языкиToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripTextBox5});
-            this.языкиToolStripMenuItem.Name = "языкиToolStripMenuItem";
-            this.языкиToolStripMenuItem.Size = new System.Drawing.Size(53, 21);
-            this.языкиToolStripMenuItem.Text = "Языки";
-            // 
-            // toolStripTextBox5
-            // 
-            this.toolStripTextBox5.Name = "toolStripTextBox5";
-            this.toolStripTextBox5.Size = new System.Drawing.Size(100, 23);
             // 
             // menu6
             // 
             this.menu6.AutoSize = false;
             this.menu6.Dock = System.Windows.Forms.DockStyle.None;
             this.menu6.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.последнееМестоToolStripMenuItem});
-            this.menu6.Location = new System.Drawing.Point(220, 289);
+            this.toolStripComboBox6});
+            this.menu6.Location = new System.Drawing.Point(220, 310);
             this.menu6.Name = "menu6";
             this.menu6.Size = new System.Drawing.Size(170, 25);
             this.menu6.TabIndex = 12;
             this.menu6.Text = "menuStrip6";
-            // 
-            // последнееМестоToolStripMenuItem
-            // 
-            this.последнееМестоToolStripMenuItem.CheckOnClick = true;
-            this.последнееМестоToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripTextBox6});
-            this.последнееМестоToolStripMenuItem.Name = "последнееМестоToolStripMenuItem";
-            this.последнееМестоToolStripMenuItem.Size = new System.Drawing.Size(115, 21);
-            this.последнееМестоToolStripMenuItem.Text = "Последнее место";
-            // 
-            // toolStripTextBox6
-            // 
-            this.toolStripTextBox6.Name = "toolStripTextBox6";
-            this.toolStripTextBox6.Size = new System.Drawing.Size(100, 23);
             // 
             // menu7
             // 
             this.menu7.AutoSize = false;
             this.menu7.Dock = System.Windows.Forms.DockStyle.None;
             this.menu7.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.преступнаяПрофессияToolStripMenuItem});
-            this.menu7.Location = new System.Drawing.Point(220, 317);
+            this.toolStripComboBox7});
+            this.menu7.Location = new System.Drawing.Point(220, 340);
             this.menu7.Name = "menu7";
             this.menu7.Size = new System.Drawing.Size(170, 25);
             this.menu7.TabIndex = 13;
             this.menu7.Text = "menuStrip7";
             // 
-            // преступнаяПрофессияToolStripMenuItem
-            // 
-            this.преступнаяПрофессияToolStripMenuItem.CheckOnClick = true;
-            this.преступнаяПрофессияToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripTextBox7});
-            this.преступнаяПрофессияToolStripMenuItem.Name = "преступнаяПрофессияToolStripMenuItem";
-            this.преступнаяПрофессияToolStripMenuItem.Size = new System.Drawing.Size(148, 21);
-            this.преступнаяПрофессияToolStripMenuItem.Text = "Преступная профессия";
-            // 
-            // toolStripTextBox7
-            // 
-            this.toolStripTextBox7.Name = "toolStripTextBox7";
-            this.toolStripTextBox7.Size = new System.Drawing.Size(100, 23);
-            // 
             // lastdeal
             // 
-            this.lastdeal.Location = new System.Drawing.Point(220, 345);
+            this.lastdeal.Location = new System.Drawing.Point(220, 374);
             this.lastdeal.Name = "lastdeal";
             this.lastdeal.Size = new System.Drawing.Size(170, 20);
             this.lastdeal.TabIndex = 14;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(147, 383);
+            this.button1.Location = new System.Drawing.Point(147, 427);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(126, 50);
             this.button1.TabIndex = 29;
@@ -447,7 +353,7 @@
             0,
             0,
             131072});
-            this.heigth.Location = new System.Drawing.Point(220, 88);
+            this.heigth.Location = new System.Drawing.Point(220, 85);
             this.heigth.Maximum = new decimal(new int[] {
             25,
             0,
@@ -478,29 +384,51 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(211, 215);
+            this.dateTimePicker1.Location = new System.Drawing.Point(208, 220);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 9;
             // 
-            // цветГлазToolStripMenuItem
+            // toolStripComboBox1
             // 
-            this.цветГлазToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.eyes});
-            this.цветГлазToolStripMenuItem.Name = "цветГлазToolStripMenuItem";
-            this.цветГлазToolStripMenuItem.Size = new System.Drawing.Size(71, 21);
-            this.цветГлазToolStripMenuItem.Text = "Цвет глаз";
+            this.toolStripComboBox1.Name = "toolStripComboBox1";
+            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 21);
             // 
-            // eyes
+            // toolStripComboBox2
             // 
-            this.eyes.Name = "eyes";
-            this.eyes.Size = new System.Drawing.Size(100, 23);
+            this.toolStripComboBox2.Name = "toolStripComboBox2";
+            this.toolStripComboBox2.Size = new System.Drawing.Size(121, 21);
+            // 
+            // toolStripComboBox3
+            // 
+            this.toolStripComboBox3.Name = "toolStripComboBox3";
+            this.toolStripComboBox3.Size = new System.Drawing.Size(121, 21);
+            // 
+            // toolStripComboBox4
+            // 
+            this.toolStripComboBox4.Name = "toolStripComboBox4";
+            this.toolStripComboBox4.Size = new System.Drawing.Size(121, 21);
+            // 
+            // toolStripComboBox5
+            // 
+            this.toolStripComboBox5.Name = "toolStripComboBox5";
+            this.toolStripComboBox5.Size = new System.Drawing.Size(121, 21);
+            // 
+            // toolStripComboBox6
+            // 
+            this.toolStripComboBox6.Name = "toolStripComboBox6";
+            this.toolStripComboBox6.Size = new System.Drawing.Size(121, 21);
+            // 
+            // toolStripComboBox7
+            // 
+            this.toolStripComboBox7.Name = "toolStripComboBox7";
+            this.toolStripComboBox7.Size = new System.Drawing.Size(121, 21);
             // 
             // AddCR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(419, 439);
+            this.ClientSize = new System.Drawing.Size(425, 500);
             this.Controls.Add(this.menu2);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label15);
@@ -534,6 +462,7 @@
             this.MainMenuStrip = this.menu2;
             this.Name = "AddCR";
             this.Text = "Добавление преступника";
+            this.Load += new System.EventHandler(this.AddCR_Load);
             this.menu1.ResumeLayout(false);
             this.menu1.PerformLayout();
             this.menu2.ResumeLayout(false);
@@ -563,9 +492,7 @@
         private System.Windows.Forms.TextBox name;
         private System.Windows.Forms.TextBox surname;
         private System.Windows.Forms.TextBox nickname;
-        private System.Windows.Forms.ToolStripMenuItem цветВолосToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menu1;
-        private System.Windows.Forms.ToolStripTextBox hairs;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.MenuStrip menu2;
@@ -579,26 +506,21 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox signs;
         private System.Windows.Forms.MenuStrip menu3;
-        private System.Windows.Forms.ToolStripMenuItem гражданствоToolStripMenuItem;
-        private System.Windows.Forms.ToolStripTextBox nationality;
         private System.Windows.Forms.MenuStrip menu4;
-        private System.Windows.Forms.ToolStripMenuItem местоРожденияToolStripMenuItem;
-        private System.Windows.Forms.ToolStripTextBox toolStripTextBox4;
         private System.Windows.Forms.MenuStrip menu5;
-        private System.Windows.Forms.ToolStripMenuItem языкиToolStripMenuItem;
-        private System.Windows.Forms.ToolStripTextBox toolStripTextBox5;
         private System.Windows.Forms.MenuStrip menu6;
-        private System.Windows.Forms.ToolStripMenuItem последнееМестоToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menu7;
-        private System.Windows.Forms.ToolStripMenuItem преступнаяПрофессияToolStripMenuItem;
         private System.Windows.Forms.TextBox lastdeal;
-        private System.Windows.Forms.ToolStripTextBox toolStripTextBox6;
-        private System.Windows.Forms.ToolStripTextBox toolStripTextBox7;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.NumericUpDown heigth;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ToolStripTextBox eyes;
-        private System.Windows.Forms.ToolStripMenuItem цветГлазToolStripMenuItem;
+        private System.Windows.Forms.ToolStripComboBox toolStripComboBox1;
+        private System.Windows.Forms.ToolStripComboBox toolStripComboBox2;
+        private System.Windows.Forms.ToolStripComboBox toolStripComboBox3;
+        private System.Windows.Forms.ToolStripComboBox toolStripComboBox4;
+        private System.Windows.Forms.ToolStripComboBox toolStripComboBox5;
+        private System.Windows.Forms.ToolStripComboBox toolStripComboBox6;
+        private System.Windows.Forms.ToolStripComboBox toolStripComboBox7;
     }
 }

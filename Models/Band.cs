@@ -14,7 +14,7 @@ namespace Kurs.Models
         #region Добавление банды
         public void Add()
         {
-
+            
         }
         #endregion
 

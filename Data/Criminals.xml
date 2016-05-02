@@ -17,22 +17,6 @@
     <lastdeal>Кража в супермаркете</lastdeal>
   </criminal>
   <criminal>
-    <name>name0</name>
-    <surname>surname0</surname>
-    <nickname>nickname0</nickname>
-    <height>1,5</height>
-    <hair>hair0</hair>
-    <eyes>eyes0</eyes>
-    <signs>signs0</signs>
-    <nationality>nationality0</nationality>
-    <dob>30.04.2016 13:50:00</dob>
-    <pob>pob0</pob>
-    <lastlocation>lastloc0</lastlocation>
-    <languages>languages0</languages>
-    <professions>prof0</professions>
-    <lastdeal>lastdeal0</lastdeal>
-  </criminal>
-  <criminal>
     <name>name1</name>
     <surname>surname1</surname>
     <nickname>nickname1</nickname>
@@ -65,8 +49,8 @@
     <lastdeal>lastdeal2</lastdeal>
   </criminal>
   <criminal>
-    <name>name3</name>
-    <surname>surname3</surname>
+    <name>Имя3</name>
+    <surname>Фамилия3</surname>
     <nickname>nickname3</nickname>
     <height>1,5</height>
     <hair>hair3</hair>
@@ -79,5 +63,21 @@
     <languages>languages3</languages>
     <professions>prof3</professions>
     <lastdeal>lastdeal3</lastdeal>
+  </criminal>
+  <criminal>
+    <name>Имя4</name>
+    <surname>Фамилия4</surname>
+    <nickname>Кличка4</nickname>
+    <height>2</height>
+    <hair>Брюнет</hair>
+    <eyes>eyes2</eyes>
+    <signs>Косоглазие</signs>
+    <nationality>nationality0</nationality>
+    <dob>02.04.2016 13:24:58</dob>
+    <pob>Харьков, Украина</pob>
+    <lastlocation>Харьков</lastlocation>
+    <languages>languages2</languages>
+    <professions>prof1</professions>
+    <lastdeal>Угон</lastdeal>
   </criminal>
 </criminals>

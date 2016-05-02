@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Kurs.Forms.Criminal;
 using Kurs.Forms.Bands;
 using Kurs.Models;
+using Kurs.Forms.Archive;
 
 namespace Kurs.Forms.Criminal
 {
@@ -32,20 +33,10 @@ namespace Kurs.Forms.Criminal
                       
         }
 
-        private void Add_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Lists crl = new Lists();
-            for (int i = 0; i < crl.ls.Count; i++)
-            {
-                listBox1.Items.Add(crl.ls[i].ToString());
-            }
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             EditCR edit = new EditCR(listBox1.SelectedIndex);
-            if (listBox1.SelectedIndex != -1)
-            {
+            
                 if (edit.ShowDialog() == DialogResult.OK)
                 {
                     Lists crl = new Lists();
@@ -53,7 +44,7 @@ namespace Kurs.Forms.Criminal
                     listBox1.Items.Add(crl.ls[crl.ls.Count - 1].ToString());
                     edit.Close();
                 }
-            }
+            
             
         }
 
@@ -94,6 +85,24 @@ namespace Kurs.Forms.Criminal
                 listBox1.Items.Add(crl.ls[i].ToString());
             }
             
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            FindCR fcr = new FindCR();
+            Lists crl = new Lists();
+            if (fcr.ShowDialog() == DialogResult.OK)
+            {
+                listBox1.Items.Clear();
+                
+            }            
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            ListARCH la = new ListARCH();
+            la.Show();
+            this.Hide();
         }
     }
 }

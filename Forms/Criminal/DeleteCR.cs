@@ -17,21 +17,21 @@ namespace Kurs.Forms
         public DeleteCR(int a)
         {
             InitializeComponent();
-            this.el = a;
+            el = a;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.Yes;
+            DialogResult = DialogResult.Yes;
             Lists crl = new Lists();
             crl.ls.Remove(crl.ls[el]);
             crl.ls[el].Delete();            
-            this.Close();            
+            Close();            
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.No;
+            DialogResult = DialogResult.No;
         }
     }
 }

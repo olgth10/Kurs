@@ -70,10 +70,21 @@ namespace Kurs.Forms.Criminal
 
         private void button4_Click(object sender, EventArgs e)
         {
-            ArchivCR arch = new ArchivCR();
-            if (arch.ShowDialog() == DialogResult.Yes)
+            ArchivCR arch = new ArchivCR(listBox1.SelectedIndex);
+            if (listBox1.SelectedIndex != -1)
             {
-
+                if (arch.ShowDialog() == DialogResult.Yes)
+                {
+                    listBox1.Items.Remove(listBox1.SelectedItem);
+                }
+                else
+                {
+                    arch.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Выберите преступника для переноса в архив");
             }
         }
 

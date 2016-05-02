@@ -114,9 +114,27 @@ namespace Kurs.Models
         #endregion
 
         #region Перенос преступника в архив
-        public void Archiv()
+        public void Archive()
         {
-
+            XmlDocument doc = new XmlDocument();
+            XmlDocument doc1 = new XmlDocument();
+            doc.Load(@"../../Data/Criminals.xml");
+            doc1.Load(@"../../Data/Archive.xml");
+            XmlNode root = doc.DocumentElement;
+            XmlNode root1 = doc1.DocumentElement;
+            Lists crl = new Lists();
+            for (int i = 0; i < crl.ls.Count; i++)
+            {
+                if (crl.ls[i].ToString() == this.ToString())
+                {
+                    XmlNode clone = root.ChildNodes[i].CloneNode(true);
+                    root1.AppendChild(clone);                    
+                    root.RemoveChild(root.ChildNodes[i]);                    
+                    break;
+                }
+            }
+            doc.Save(@"../../Data/Criminals.xml");
+            doc1.Save(@"../../Data/Archive.xml");
         }
         #endregion
 
@@ -148,24 +166,6 @@ namespace Kurs.Models
             doc.Save(@"../../Data/Criminals.xml");
         }
         #endregion
-
-        public List<Criminal> Find()
-        {
-            List<Criminal> fn=new List<Criminal>();
-            XmlDocument doc = new XmlDocument();
-            Lists crl = new Lists();
-            doc.Load(@"../../Data/Criminals.xml");
-            XmlNode root = doc.DocumentElement;
-            for (int i=0;root.ChildNodes[i]!= null; i++)
-            {
-                if (root.ChildNodes[i].ChildNodes[0].InnerText.ToLower().Contains(name.Trim(' ').ToLower()) && root.ChildNodes[i].ChildNodes[1].InnerText.ToLower().Contains(surname.Trim(' ').ToLower()) && root.ChildNodes[i].ChildNodes[2].InnerText.ToLower().Contains(nickname.Trim(' ').ToLower()) && root.ChildNodes[i].ChildNodes[3].InnerText.Contains(heigth.ToString()) && root.ChildNodes[i].ChildNodes[3].InnerText.Contains(heigth.ToString()) && ls[i].eyes == cr.eyes && ls[i].signs.ToLower().Contains(cr.signs.Trim(' ').ToLower()) && ls[i].nationality == cr.nationality && ls[i].dob == cr.dob && ls[i].pob == cr.pob && ls[i].lastlocation == cr.lastlocation && ls[i].languages.ToLower().Contains(cr.languages.Trim(' ').ToLower()) && ls[i].professions.ToLower().Contains(cr.professions.Trim(' ').ToLower()) && ls[i].lastdeal.ToLower().Contains(cr.lastdeal.Trim(' ').ToLower()))
-                {
-                    Criminal cr = new Criminal(root.ChildNodes[i].ChildNodes[0].InnerText, root.ChildNodes[i].ChildNodes[1].InnerText, root.ChildNodes[i].ChildNodes[2].InnerText,double.Parse( root.ChildNodes[i].ChildNodes[3].InnerText), root.ChildNodes[i].ChildNodes[4].InnerText, root.ChildNodes[i].ChildNodes[5].InnerText, root.ChildNodes[i].ChildNodes[6].InnerText, root.ChildNodes[i].ChildNodes[7].InnerText,DateTime.Parse( root.ChildNodes[i].ChildNodes[8].InnerText), root.ChildNodes[i].ChildNodes[9].InnerText, root.ChildNodes[i].ChildNodes[10].InnerText, root.ChildNodes[i].ChildNodes[11].InnerText, root.ChildNodes[i].ChildNodes[12].InnerText, root.ChildNodes[i].ChildNodes[13].InnerText);
-                    fn.Add(ls[i]);
-                }
-            }
-            return fn;
-        }
 
         public override string ToString()
         {

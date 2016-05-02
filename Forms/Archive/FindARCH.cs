@@ -9,26 +9,24 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Kurs.Models;
 
-namespace Kurs.Forms
+namespace Kurs.Forms.Archive
 {
-    public partial class FindCR : Form
+    public partial class FindARCH : Form
     {
-        public FindCR()
+        public FindARCH()
         {
             InitializeComponent();
         }
-
         public List<Models.Criminal> fn;
-
         private void button1_Click(object sender, EventArgs e)
         {
             Kurs.Models.Criminal cr = new Models.Criminal(name.Text, surname.Text, nickname.Text, double.Parse(heigth.Value.ToString()), toolStripComboBox1.Text, toolStripComboBox2.Text, signs.Text, toolStripComboBox3.Text, dateTimePicker1.Value, toolStripComboBox4.Text, toolStripComboBox5.Text, toolStripComboBox6.Text, toolStripComboBox7.Text, lastdeal.Text);
             Lists crl = new Lists();
-            fn=crl.Find(cr);
+            fn = crl.Findarch(cr);
             DialogResult = DialogResult.OK;
         }
 
-        private void FindCR_Load(object sender, EventArgs e)
+        private void FindARCH_Load(object sender, EventArgs e)
         {
             Lists crl = new Lists();
             toolStripComboBox1.Items.Add(crl.ls[0].hair);

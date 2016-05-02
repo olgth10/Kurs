@@ -9,34 +9,30 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Kurs.Models;
 
-namespace Kurs.Forms
+namespace Kurs.Forms.Archive
 {
-    public partial class DeleteCR : Form
+    public partial class ToListCR : Form
     {
-        public int el;
-        public DeleteCR(int a)
+        private int el;
+
+        public ToListCR(int a)
         {
             InitializeComponent();
             el = a;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Yes;
             Lists crl = new Lists();
-            crl.ls.Remove(crl.ls[el]);
-            crl.ls[el].Delete();            
-            Close();            
+            crl.arch.Remove(crl.arch[el]);
+            crl.arch[el].FromArchive();
+            Close();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.No;
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -461,6 +461,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FindCR";
             this.Text = "Поиск преступников";
+            this.Load += new System.EventHandler(this.FindCR_Load);
             this.menu2.ResumeLayout(false);
             this.menu2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.heigth)).EndInit();

@@ -45,11 +45,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\Archive\ChangeInARCH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Archive\ChangeInARCH.Designer.cs">
+      <DependentUpon>ChangeInARCH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Archive\DeleteCR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Archive\DeleteCR.Designer.cs">
+      <DependentUpon>DeleteCR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Archive\FindARCH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Archive\FindARCH.Designer.cs">
+      <DependentUpon>FindARCH.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Archive\ListARCH.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Archive\ListARCH.Designer.cs">
       <DependentUpon>ListARCH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Archive\ToListCR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Archive\ToListCR.Designer.cs">
+      <DependentUpon>ToListCR.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Bands\AddB.cs">
       <SubType>Form</SubType>
@@ -128,8 +152,20 @@
     <Compile Include="Models\Lists.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Archive\ChangeInARCH.resx">
+      <DependentUpon>ChangeInARCH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Archive\DeleteCR.resx">
+      <DependentUpon>DeleteCR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Archive\FindARCH.resx">
+      <DependentUpon>FindARCH.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Archive\ListARCH.resx">
       <DependentUpon>ListARCH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Archive\ToListCR.resx">
+      <DependentUpon>ToListCR.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Criminal\AddCR.resx">
       <DependentUpon>AddCR.cs</DependentUpon>

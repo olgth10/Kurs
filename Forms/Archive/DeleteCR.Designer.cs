@@ -1,6 +1,6 @@
-﻿namespace Kurs.Forms
+﻿namespace Kurs.Forms.Archive
 {
-    partial class ArchivCR
+    partial class DeleteCR
     {
         /// <summary>
         /// Required designer variable.
@@ -40,7 +40,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(367, 23);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Перенести преступника в архив?";
+            this.label1.Text = "Удалить преступника?";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button2
@@ -51,7 +51,6 @@
             this.button2.TabIndex = 4;
             this.button2.Text = "Нет";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -63,16 +62,16 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // ArchivCR
+            // DeleteCR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(399, 130);
+            this.ClientSize = new System.Drawing.Size(411, 113);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Name = "ArchivCR";
-            this.Text = "Перенос преступника в архив";
+            this.Name = "DeleteCR";
+            this.Text = "DeleteCR";
             this.ResumeLayout(false);
 
         }

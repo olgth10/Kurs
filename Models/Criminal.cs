@@ -7,7 +7,7 @@ using System.Xml;
 
 namespace Kurs.Models
 {
-    class Criminal
+    public class Criminal
     {
         public string name;
         public string surname;
@@ -114,7 +114,7 @@ namespace Kurs.Models
         #endregion
 
         #region Перенос преступника в архив
-        public void Archive()
+        public void ToArchive()
         {
             XmlDocument doc = new XmlDocument();
             XmlDocument doc1 = new XmlDocument();
@@ -127,9 +127,34 @@ namespace Kurs.Models
             {
                 if (crl.ls[i].ToString() == this.ToString())
                 {
-                    XmlNode clone = root.ChildNodes[i].CloneNode(true);
-                    root1.AppendChild(clone);                    
+                    XmlNode temp = doc1.ImportNode(root.ChildNodes[i], true);
+                    root1.AppendChild(temp);                    
                     root.RemoveChild(root.ChildNodes[i]);                    
+                    break;
+                }
+            }
+            doc.Save(@"../../Data/Criminals.xml");
+            doc1.Save(@"../../Data/Archive.xml");
+        }
+        #endregion
+
+        #region Перенос преступника из архива
+        public void FromArchive()
+        {
+            XmlDocument doc = new XmlDocument();
+            XmlDocument doc1 = new XmlDocument();
+            doc.Load(@"../../Data/Criminals.xml");
+            doc1.Load(@"../../Data/Archive.xml");
+            XmlNode root = doc.DocumentElement;
+            XmlNode root1 = doc1.DocumentElement;
+            Lists crl = new Lists();
+            for (int i = 0; i < crl.arch.Count; i++)
+            {
+                if (crl.arch[i].ToString() == this.ToString())
+                {
+                    XmlNode temp = doc.ImportNode(root1.ChildNodes[i], true);
+                    root.AppendChild(temp);
+                    root1.RemoveChild(root1.ChildNodes[i]);
                     break;
                 }
             }
@@ -158,12 +183,30 @@ namespace Kurs.Models
             XmlNode root = doc.DocumentElement;
             for (int i = 0; i < crl.ls.Count; i++)
             {
-                if (crl.ls[i].ToString() == this.ToString())
+                if (crl.ls[i].ToString() == ToString())
                 {
                     root.RemoveChild(root.ChildNodes[i]);
                 }
             }  
             doc.Save(@"../../Data/Criminals.xml");
+        }
+        #endregion
+
+        #region Удаление преступника из архива
+        public void DeleteArch()
+        {
+            XmlDocument doc = new XmlDocument();
+            Lists crl = new Lists();
+            doc.Load(@"../../Data/Archive.xml");
+            XmlNode root = doc.DocumentElement;
+            for (int i = 0; i < crl.arch.Count; i++)
+            {
+                if (crl.arch[i].ToString() == ToString())
+                {
+                    root.RemoveChild(root.ChildNodes[i]);
+                }
+            }
+            doc.Save(@"../../Data/Archive.xml");
         }
         #endregion
 

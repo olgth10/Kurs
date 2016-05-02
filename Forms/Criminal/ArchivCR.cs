@@ -24,7 +24,12 @@ namespace Kurs.Forms
             DialogResult = DialogResult.Yes;
             Lists crl = new Lists();
             crl.ls.Remove(crl.ls[el]);
-            crl.ls[el].Archive();
+            crl.ls[el].ToArchive();                        
+            Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
             Close();
         }
     }

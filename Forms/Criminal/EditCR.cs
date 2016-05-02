@@ -25,7 +25,44 @@ namespace Kurs.Forms.Criminal
             toolStripComboBox5.Items.Add(crl.ls[0].lastlocation);
             toolStripComboBox6.Items.Add(crl.ls[0].languages);
             toolStripComboBox7.Items.Add(crl.ls[0].professions);
-
+            toolStripComboBox1.Items.Add(crl.arch[0].hair);
+            toolStripComboBox2.Items.Add(crl.arch[0].eyes);
+            toolStripComboBox3.Items.Add(crl.arch[0].nationality);
+            toolStripComboBox4.Items.Add(crl.arch[0].pob);
+            toolStripComboBox5.Items.Add(crl.arch[0].lastlocation);
+            toolStripComboBox6.Items.Add(crl.arch[0].languages);
+            toolStripComboBox7.Items.Add(crl.arch[0].professions);
+            for (int i = 1; i < crl.arch.Count; i++)
+            {
+                if (toolStripComboBox1.Items.IndexOf(crl.arch[i].hair) == -1)
+                {
+                    toolStripComboBox1.Items.Add(crl.arch[i].hair);
+                }
+                if (toolStripComboBox2.Items.IndexOf(crl.arch[i].eyes) == -1)
+                {
+                    toolStripComboBox2.Items.Add(crl.arch[i].eyes);
+                }
+                if (toolStripComboBox3.Items.IndexOf(crl.arch[i].nationality) == -1)
+                {
+                    toolStripComboBox3.Items.Add(crl.arch[i].nationality);
+                }
+                if (toolStripComboBox4.Items.IndexOf(crl.arch[i].pob) == -1)
+                {
+                    toolStripComboBox4.Items.Add(crl.arch[i].pob);
+                }
+                if (toolStripComboBox5.Items.IndexOf(crl.arch[i].lastlocation) == -1)
+                {
+                    toolStripComboBox5.Items.Add(crl.arch[i].lastlocation);
+                }
+                if (toolStripComboBox6.Items.IndexOf(crl.arch[i].languages) == -1)
+                {
+                    toolStripComboBox6.Items.Add(crl.arch[i].languages);
+                }
+                if (toolStripComboBox7.Items.IndexOf(crl.arch[i].professions) == -1)
+                {
+                    toolStripComboBox7.Items.Add(crl.arch[i].professions);
+                }
+            }
             for (int i = 1; i < crl.ls.Count; i++)
             {
                 if (toolStripComboBox1.Items.IndexOf(crl.ls[i].hair) == -1)
@@ -91,6 +128,11 @@ namespace Kurs.Forms.Criminal
             cr.Add();
             crl.ls.Add(cr);
             this.DialogResult = DialogResult.OK;
+        }
+
+        private void EditCR_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

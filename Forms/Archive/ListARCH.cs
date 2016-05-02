@@ -25,5 +25,116 @@ namespace Kurs.Forms.Archive
             lcr.Show();
             this.Close();
         }
+
+        private void ListARCH_Load(object sender, EventArgs e)
+        {
+            Lists ls = new Lists();
+            foreach(Models.Criminal cr in ls.arch)
+            {
+                listBox1.Items.Add(cr.ToString());
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ToListCR tlcr = new ToListCR(listBox1.SelectedIndex);
+            if (listBox1.SelectedIndex != -1)
+            {
+                if (tlcr.ShowDialog() == DialogResult.Yes)
+                {
+                    listBox1.Items.Remove(listBox1.SelectedItem);
+                }
+                else
+                {
+                    tlcr.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Выберите преступника для удаления!");
+            }
+        }
+        private DeleteCR del;
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Lists ls = new Lists();
+            if (button8.Visible)
+            {
+                if (listBox1.SelectedIndex != -1)
+                {
+
+                    for (int i = 0; i < ls.arch.Count; i++)
+                    {
+                        if (ls.arch[i].ToString() == listBox1.SelectedItem.ToString())
+                        {
+                            del = new DeleteCR(i);
+                        }
+                    }
+                    if (del.ShowDialog() == DialogResult.Yes)
+                    {
+                        listBox1.Items.Remove(listBox1.SelectedItem);
+                    }
+                    else
+                    {
+                        del.Close();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Выберите преступника для удаления!");
+                }
+            }
+            else
+            {
+                DeleteCR del = new DeleteCR(listBox1.SelectedIndex);
+                if (listBox1.SelectedIndex != -1)
+                {
+                    if (del.ShowDialog() == DialogResult.Yes)
+                    {
+                        listBox1.Items.Remove(listBox1.SelectedItem);
+                    }
+                    else
+                    {
+                        del.Close();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Выберите преступника для удаления!");
+                }
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            FindARCH fcr = new FindARCH();
+            Lists crl = new Lists();
+
+            if (fcr.ShowDialog() == DialogResult.OK)
+            {
+                listBox1.Items.Clear();
+                for (int i = 0; i < fcr.fn.Count; i++)
+                {
+                    listBox1.Items.Add(fcr.fn[i].ToString());
+                    button8.Visible = true;
+                }
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ChangeInARCH ch = new ChangeInARCH();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Lists crl = new Lists();
+            listBox1.Items.Clear();
+            for (int i = 0; i < crl.arch.Count; i++)
+            {
+                listBox1.Items.Add(crl.arch[i].ToString());
+            }
+            button8.Visible = false;
+        }
     }
 }

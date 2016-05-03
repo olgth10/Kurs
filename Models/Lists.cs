@@ -19,7 +19,7 @@ namespace Kurs.Models
                 XmlNode root = doc.DocumentElement;
                 for (int i = 0; root.ChildNodes[i] != null; i++)
                 {
-                    Criminal cr = new Criminal(root.ChildNodes[i].ChildNodes[0].InnerText, root.ChildNodes[i].ChildNodes[1].InnerText, root.ChildNodes[i].ChildNodes[2].InnerText, double.Parse(root.ChildNodes[i].ChildNodes[3].InnerText), root.ChildNodes[i].ChildNodes[4].InnerText, root.ChildNodes[i].ChildNodes[5].InnerText, root.ChildNodes[i].ChildNodes[6].InnerText, root.ChildNodes[i].ChildNodes[7].InnerText, DateTime.Parse(root.ChildNodes[i].ChildNodes[8].InnerText), root.ChildNodes[i].ChildNodes[9].InnerText, root.ChildNodes[i].ChildNodes[10].InnerText, root.ChildNodes[i].ChildNodes[11].InnerText, root.ChildNodes[i].ChildNodes[12].InnerText, root.ChildNodes[i].ChildNodes[13].InnerText);
+                    Criminal cr = new Criminal(root.ChildNodes[i].ChildNodes[0].InnerText, root.ChildNodes[i].ChildNodes[1].InnerText, root.ChildNodes[i].ChildNodes[2].InnerText, double.Parse(root.ChildNodes[i].ChildNodes[3].InnerText), root.ChildNodes[i].ChildNodes[4].InnerText, root.ChildNodes[i].ChildNodes[5].InnerText, root.ChildNodes[i].ChildNodes[6].InnerText, root.ChildNodes[i].ChildNodes[7].InnerText, DateTime.Parse(root.ChildNodes[i].ChildNodes[8].InnerText), root.ChildNodes[i].ChildNodes[9].InnerText, root.ChildNodes[i].ChildNodes[10].InnerText, root.ChildNodes[i].ChildNodes[11].InnerText, root.ChildNodes[i].ChildNodes[12].InnerText, root.ChildNodes[i].ChildNodes[13].InnerText,root.ChildNodes[i].ChildNodes[14].InnerText);
                     l.Add(cr);
                 }
                 return l;
@@ -36,8 +36,77 @@ namespace Kurs.Models
                 XmlNode root = doc.DocumentElement;
                 for (int i = 0; root.ChildNodes[i] != null; i++)
                 {
-                    Criminal cr = new Criminal(root.ChildNodes[i].ChildNodes[0].InnerText, root.ChildNodes[i].ChildNodes[1].InnerText, root.ChildNodes[i].ChildNodes[2].InnerText, double.Parse(root.ChildNodes[i].ChildNodes[3].InnerText), root.ChildNodes[i].ChildNodes[4].InnerText, root.ChildNodes[i].ChildNodes[5].InnerText, root.ChildNodes[i].ChildNodes[6].InnerText, root.ChildNodes[i].ChildNodes[7].InnerText, DateTime.Parse(root.ChildNodes[i].ChildNodes[8].InnerText), root.ChildNodes[i].ChildNodes[9].InnerText, root.ChildNodes[i].ChildNodes[10].InnerText, root.ChildNodes[i].ChildNodes[11].InnerText, root.ChildNodes[i].ChildNodes[12].InnerText, root.ChildNodes[i].ChildNodes[13].InnerText);
+                    Criminal cr = new Criminal(root.ChildNodes[i].ChildNodes[0].InnerText, root.ChildNodes[i].ChildNodes[1].InnerText, root.ChildNodes[i].ChildNodes[2].InnerText, double.Parse(root.ChildNodes[i].ChildNodes[3].InnerText), root.ChildNodes[i].ChildNodes[4].InnerText, root.ChildNodes[i].ChildNodes[5].InnerText, root.ChildNodes[i].ChildNodes[6].InnerText, root.ChildNodes[i].ChildNodes[7].InnerText, DateTime.Parse(root.ChildNodes[i].ChildNodes[8].InnerText), root.ChildNodes[i].ChildNodes[9].InnerText, root.ChildNodes[i].ChildNodes[10].InnerText, root.ChildNodes[i].ChildNodes[11].InnerText, root.ChildNodes[i].ChildNodes[12].InnerText, root.ChildNodes[i].ChildNodes[13].InnerText,root.ChildNodes[i].ChildNodes[14].InnerText);
                     l.Add(cr);
+                }
+                return l;
+            }
+        }
+        private bool c;
+        public List<Band> lb
+        {
+            get
+            {
+                List<Band> l = new List<Band>();
+                int k = 0;
+                for (int i = 0; i < ls.Count; i++)
+                {
+                    c = true;
+                    for (int n = 0; n < l.Count; n++)
+                    {
+                        if (ls[i].band==l[n].name)
+                        {
+                            c = false;
+                            break;
+                        }
+                    }
+                    if (c)
+                    {
+                        l.Add(new Band(ls[i].band));
+                        for (int j = i; j < ls.Count; j++)
+                        {
+                            if (ls[j].band == l[k].name)
+                            {
+                                l[k].ls.Add(ls[j]);
+                            }
+                        }
+                        k++;
+                    }
+                    
+                }
+                return l;
+            }
+        }
+        public List<Band> lbarch
+        {
+            get
+            {
+                List<Band> l = new List<Band>();
+                int k = 0;
+                for (int i = 0; i < arch.Count; i++)
+                {
+                    c = true;
+                    for (int n = 0; n < l.Count; n++)
+                    {
+                        if (arch[i].band == l[n].name)
+                        {
+                            c = false;
+                            break;
+                        }
+                    }
+                    if (c)
+                    {
+                        l.Add(new Band(arch[i].band));
+                        for (int j = i; j < arch.Count; j++)
+                        {
+                            if (arch[j].band == l[k].name)
+                            {
+                                l[k].ls.Add(arch[j]);
+                            }
+                        }
+                        k++;
+                    }
+
                 }
                 return l;
             }

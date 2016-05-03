@@ -65,6 +65,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.Band = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.toolStripComboBox8 = new System.Windows.Forms.ToolStripComboBox();
             this.menu2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.heigth)).BeginInit();
             this.menu1.SuspendLayout();
@@ -73,6 +76,7 @@
             this.menu5.SuspendLayout();
             this.menu6.SuspendLayout();
             this.menu7.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menu2
@@ -91,6 +95,7 @@
             // 
             this.toolStripComboBox2.Name = "toolStripComboBox2";
             this.toolStripComboBox2.Size = new System.Drawing.Size(121, 21);
+            this.toolStripComboBox2.Sorted = true;
             // 
             // dateTimePicker1
             // 
@@ -144,6 +149,7 @@
             this.button1.TabIndex = 120;
             this.button1.Text = "Найти преступника";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // lastdeal
             // 
@@ -276,6 +282,7 @@
             // 
             this.toolStripComboBox1.Name = "toolStripComboBox1";
             this.toolStripComboBox1.Size = new System.Drawing.Size(121, 21);
+            this.toolStripComboBox1.Sorted = true;
             // 
             // menu3
             // 
@@ -293,6 +300,7 @@
             // 
             this.toolStripComboBox3.Name = "toolStripComboBox3";
             this.toolStripComboBox3.Size = new System.Drawing.Size(121, 21);
+            this.toolStripComboBox3.Sorted = true;
             // 
             // menu4
             // 
@@ -310,6 +318,7 @@
             // 
             this.toolStripComboBox4.Name = "toolStripComboBox4";
             this.toolStripComboBox4.Size = new System.Drawing.Size(121, 21);
+            this.toolStripComboBox4.Sorted = true;
             // 
             // menu5
             // 
@@ -327,6 +336,7 @@
             // 
             this.toolStripComboBox5.Name = "toolStripComboBox5";
             this.toolStripComboBox5.Size = new System.Drawing.Size(121, 21);
+            this.toolStripComboBox5.Sorted = true;
             // 
             // menu6
             // 
@@ -344,6 +354,7 @@
             // 
             this.toolStripComboBox6.Name = "toolStripComboBox6";
             this.toolStripComboBox6.Size = new System.Drawing.Size(121, 21);
+            this.toolStripComboBox6.Sorted = true;
             // 
             // menu7
             // 
@@ -361,6 +372,7 @@
             // 
             this.toolStripComboBox7.Name = "toolStripComboBox7";
             this.toolStripComboBox7.Size = new System.Drawing.Size(121, 21);
+            this.toolStripComboBox7.Sorted = true;
             // 
             // nickname
             // 
@@ -423,11 +435,40 @@
             this.label1.Text = "Имя";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // Band
+            // 
+            this.Band.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Band.Location = new System.Drawing.Point(16, 394);
+            this.Band.Name = "Band";
+            this.Band.Size = new System.Drawing.Size(186, 23);
+            this.Band.TabIndex = 122;
+            this.Band.Text = "Банда";
+            this.Band.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripComboBox8});
+            this.menuStrip1.Location = new System.Drawing.Point(220, 397);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(131, 27);
+            this.menuStrip1.TabIndex = 123;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // toolStripComboBox8
+            // 
+            this.toolStripComboBox8.Name = "toolStripComboBox8";
+            this.toolStripComboBox8.Size = new System.Drawing.Size(121, 23);
+            this.toolStripComboBox8.Sorted = true;
+            // 
             // ChangeInARCH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(428, 489);
+            this.Controls.Add(this.Band);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.menu2);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label15);
@@ -459,7 +500,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "ChangeInARCH";
-            this.Text = "ChangeInARCH";
+            this.Text = "Изменение данных преступника в архиве";
             this.Load += new System.EventHandler(this.ChangeInARCH_Load);
             this.menu2.ResumeLayout(false);
             this.menu2.PerformLayout();
@@ -476,6 +517,8 @@
             this.menu6.PerformLayout();
             this.menu7.ResumeLayout(false);
             this.menu7.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -520,5 +563,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label Band;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripComboBox toolStripComboBox8;
     }
 }

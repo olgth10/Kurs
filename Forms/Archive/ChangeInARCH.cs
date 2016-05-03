@@ -13,29 +13,37 @@ namespace Kurs.Forms.Archive
 {
     public partial class ChangeInARCH : Form
     {
-        public ChangeInARCH()
+        private int el;
+        public ChangeInARCH(int a)
         {
             InitializeComponent();
+            el = a;
+            Lists crl = new Lists();
+            if (a != -1)
+            {
+                name.Text = crl.arch[a].name;
+                surname.Text = crl.arch[a].surname;
+                nickname.Text = crl.arch[a].nickname;
+                heigth.Value = decimal.Parse(crl.arch[a].heigth.ToString());
+                toolStripComboBox1.Text = crl.arch[a].hair;
+                toolStripComboBox2.Text = crl.arch[a].eyes;
+                signs.Text = crl.arch[a].signs;
+                toolStripComboBox3.Text = crl.arch[a].nationality;
+                dateTimePicker1.Value = crl.arch[a].dob;
+                toolStripComboBox4.Text = crl.arch[a].pob;
+                toolStripComboBox5.Text = crl.arch[a].lastlocation;
+                toolStripComboBox6.Text = crl.arch[a].languages;
+                toolStripComboBox7.Text = crl.arch[a].professions;
+                lastdeal.Text = crl.arch[a].lastdeal;
+                toolStripComboBox8.Text = crl.arch[a].band;
+            }            
         }
 
         private void ChangeInARCH_Load(object sender, EventArgs e)
         {
             Lists crl = new Lists();
-            toolStripComboBox1.Items.Add(crl.ls[0].hair);
-            toolStripComboBox2.Items.Add(crl.ls[0].eyes);
-            toolStripComboBox3.Items.Add(crl.ls[0].nationality);
-            toolStripComboBox4.Items.Add(crl.ls[0].pob);
-            toolStripComboBox5.Items.Add(crl.ls[0].lastlocation);
-            toolStripComboBox6.Items.Add(crl.ls[0].languages);
-            toolStripComboBox7.Items.Add(crl.ls[0].professions);
-            toolStripComboBox1.Items.Add(crl.arch[0].hair);
-            toolStripComboBox2.Items.Add(crl.arch[0].eyes);
-            toolStripComboBox3.Items.Add(crl.arch[0].nationality);
-            toolStripComboBox4.Items.Add(crl.arch[0].pob);
-            toolStripComboBox5.Items.Add(crl.arch[0].lastlocation);
-            toolStripComboBox6.Items.Add(crl.arch[0].languages);
-            toolStripComboBox7.Items.Add(crl.arch[0].professions);
-            for (int i = 1; i < crl.arch.Count; i++)
+
+            for (int i = 0; i < crl.arch.Count; i++)
             {
                 if (toolStripComboBox1.Items.IndexOf(crl.arch[i].hair) == -1)
                 {
@@ -65,8 +73,12 @@ namespace Kurs.Forms.Archive
                 {
                     toolStripComboBox7.Items.Add(crl.arch[i].professions);
                 }
+                if (toolStripComboBox8.Items.IndexOf(crl.arch[i].band) == -1)
+                {
+                    toolStripComboBox8.Items.Add(crl.arch[i].band);
+                }
             }
-            for (int i = 1; i < crl.ls.Count; i++)
+            for (int i = 0; i < crl.ls.Count; i++)
             {
                 if (toolStripComboBox1.Items.IndexOf(crl.ls[i].hair) == -1)
                 {
@@ -96,7 +108,23 @@ namespace Kurs.Forms.Archive
                 {
                     toolStripComboBox7.Items.Add(crl.ls[i].professions);
                 }
+                if (toolStripComboBox8.Items.IndexOf(crl.ls[i].band) == -1)
+                {
+                    toolStripComboBox8.Items.Add(crl.ls[i].band);
+                }
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Lists crl = new Lists();
+            crl.arch.Remove(crl.arch[el]);
+            crl.arch[el].DeleteArch();            
+            Kurs.Models.Criminal cr = new Models.Criminal(name.Text, surname.Text, nickname.Text, double.Parse(heigth.Value.ToString()), toolStripComboBox1.Text, toolStripComboBox2.Text, signs.Text, toolStripComboBox3.Text, dateTimePicker1.Value, toolStripComboBox4.Text, toolStripComboBox5.Text, toolStripComboBox6.Text, toolStripComboBox7.Text, lastdeal.Text,toolStripComboBox8.Text);
+            cr.Add();
+            cr.ToArchive();
+            crl.arch.Add(cr);
+            DialogResult = DialogResult.OK;
         }
     }
 }

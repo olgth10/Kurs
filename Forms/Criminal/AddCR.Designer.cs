@@ -65,6 +65,9 @@
             this.heigth = new System.Windows.Forms.NumericUpDown();
             this.label15 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.Band = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.toolStripComboBox8 = new System.Windows.Forms.ToolStripComboBox();
             this.menu1.SuspendLayout();
             this.menu2.SuspendLayout();
             this.menu3.SuspendLayout();
@@ -73,6 +76,7 @@
             this.menu6.SuspendLayout();
             this.menu7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.heigth)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -84,7 +88,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Имя";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -95,7 +98,6 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Фамилия";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -106,7 +108,6 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Кличка";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -117,7 +118,6 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Рост";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // name
             // 
@@ -125,7 +125,6 @@
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(170, 20);
             this.name.TabIndex = 1;
-            this.name.TextChanged += new System.EventHandler(this.name_TextChanged);
             // 
             // surname
             // 
@@ -133,7 +132,6 @@
             this.surname.Name = "surname";
             this.surname.Size = new System.Drawing.Size(170, 20);
             this.surname.TabIndex = 2;
-            this.surname.TextChanged += new System.EventHandler(this.surname_TextChanged);
             // 
             // nickname
             // 
@@ -141,7 +139,6 @@
             this.nickname.Name = "nickname";
             this.nickname.Size = new System.Drawing.Size(170, 20);
             this.nickname.TabIndex = 3;
-            this.nickname.TextChanged += new System.EventHandler(this.nickname_TextChanged);
             // 
             // menu1
             // 
@@ -155,12 +152,12 @@
             this.menu1.Size = new System.Drawing.Size(170, 25);
             this.menu1.TabIndex = 5;
             this.menu1.Text = "menuStrip1";
-            this.menu1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menu1_ItemClicked);
             // 
             // toolStripComboBox1
             // 
             this.toolStripComboBox1.Name = "toolStripComboBox1";
             this.toolStripComboBox1.Size = new System.Drawing.Size(121, 21);
+            this.toolStripComboBox1.Sorted = true;
             // 
             // label5
             // 
@@ -171,7 +168,6 @@
             this.label5.TabIndex = 10;
             this.label5.Text = "Цвет волос";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -182,7 +178,6 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "Цвет глаз";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // menu2
             // 
@@ -195,12 +190,12 @@
             this.menu2.Size = new System.Drawing.Size(170, 25);
             this.menu2.TabIndex = 6;
             this.menu2.Text = "menuStrip2";
-            this.menu2.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menu2_ItemClicked);
             // 
             // toolStripComboBox2
             // 
             this.toolStripComboBox2.Name = "toolStripComboBox2";
             this.toolStripComboBox2.Size = new System.Drawing.Size(121, 21);
+            this.toolStripComboBox2.Sorted = true;
             // 
             // label7
             // 
@@ -211,7 +206,6 @@
             this.label7.TabIndex = 13;
             this.label7.Text = "Особые приметы";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label8
             // 
@@ -222,7 +216,6 @@
             this.label8.TabIndex = 14;
             this.label8.Text = "Гражданство";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label9
             // 
@@ -233,7 +226,6 @@
             this.label9.TabIndex = 15;
             this.label9.Text = "Место рождения";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label10
             // 
@@ -244,7 +236,6 @@
             this.label10.TabIndex = 16;
             this.label10.Text = "Дата рождения";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // label11
             // 
@@ -255,7 +246,6 @@
             this.label11.TabIndex = 17;
             this.label11.Text = "Языки";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // label12
             // 
@@ -266,7 +256,6 @@
             this.label12.TabIndex = 18;
             this.label12.Text = "Последнее место";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // label13
             // 
@@ -277,7 +266,6 @@
             this.label13.TabIndex = 19;
             this.label13.Text = "Преступная профессия";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // label14
             // 
@@ -288,7 +276,6 @@
             this.label14.TabIndex = 20;
             this.label14.Text = "Последнее дело";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // signs
             // 
@@ -296,7 +283,6 @@
             this.signs.Name = "signs";
             this.signs.Size = new System.Drawing.Size(170, 20);
             this.signs.TabIndex = 7;
-            this.signs.TextChanged += new System.EventHandler(this.signs_TextChanged);
             // 
             // menu3
             // 
@@ -309,12 +295,12 @@
             this.menu3.Size = new System.Drawing.Size(170, 25);
             this.menu3.TabIndex = 8;
             this.menu3.Text = "menuStrip3";
-            this.menu3.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menu3_ItemClicked);
             // 
             // toolStripComboBox3
             // 
             this.toolStripComboBox3.Name = "toolStripComboBox3";
             this.toolStripComboBox3.Size = new System.Drawing.Size(121, 21);
+            this.toolStripComboBox3.Sorted = true;
             // 
             // menu4
             // 
@@ -327,12 +313,12 @@
             this.menu4.Size = new System.Drawing.Size(170, 25);
             this.menu4.TabIndex = 10;
             this.menu4.Text = "menuStrip4";
-            this.menu4.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menu4_ItemClicked);
             // 
             // toolStripComboBox4
             // 
             this.toolStripComboBox4.Name = "toolStripComboBox4";
             this.toolStripComboBox4.Size = new System.Drawing.Size(121, 21);
+            this.toolStripComboBox4.Sorted = true;
             // 
             // menu5
             // 
@@ -345,12 +331,12 @@
             this.menu5.Size = new System.Drawing.Size(170, 25);
             this.menu5.TabIndex = 11;
             this.menu5.Text = "menuStrip5";
-            this.menu5.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menu5_ItemClicked);
             // 
             // toolStripComboBox5
             // 
             this.toolStripComboBox5.Name = "toolStripComboBox5";
             this.toolStripComboBox5.Size = new System.Drawing.Size(121, 21);
+            this.toolStripComboBox5.Sorted = true;
             // 
             // menu6
             // 
@@ -363,12 +349,12 @@
             this.menu6.Size = new System.Drawing.Size(170, 25);
             this.menu6.TabIndex = 12;
             this.menu6.Text = "menuStrip6";
-            this.menu6.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menu6_ItemClicked);
             // 
             // toolStripComboBox6
             // 
             this.toolStripComboBox6.Name = "toolStripComboBox6";
             this.toolStripComboBox6.Size = new System.Drawing.Size(121, 21);
+            this.toolStripComboBox6.Sorted = true;
             // 
             // menu7
             // 
@@ -381,12 +367,12 @@
             this.menu7.Size = new System.Drawing.Size(170, 25);
             this.menu7.TabIndex = 13;
             this.menu7.Text = "menuStrip7";
-            this.menu7.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menu7_ItemClicked);
             // 
             // toolStripComboBox7
             // 
             this.toolStripComboBox7.Name = "toolStripComboBox7";
             this.toolStripComboBox7.Size = new System.Drawing.Size(121, 21);
+            this.toolStripComboBox7.Sorted = true;
             // 
             // lastdeal
             // 
@@ -394,11 +380,10 @@
             this.lastdeal.Name = "lastdeal";
             this.lastdeal.Size = new System.Drawing.Size(170, 20);
             this.lastdeal.TabIndex = 14;
-            this.lastdeal.TextChanged += new System.EventHandler(this.lastdeal_TextChanged);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(147, 427);
+            this.button1.Location = new System.Drawing.Point(146, 438);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(126, 50);
             this.button1.TabIndex = 29;
@@ -433,7 +418,6 @@
             0,
             0,
             0});
-            this.heigth.ValueChanged += new System.EventHandler(this.heigth_ValueChanged);
             // 
             // label15
             // 
@@ -443,7 +427,6 @@
             this.label15.Size = new System.Drawing.Size(18, 13);
             this.label15.TabIndex = 31;
             this.label15.Text = "м.";
-            this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
             // dateTimePicker1
             // 
@@ -451,13 +434,39 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 9;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
+            // Band
+            // 
+            this.Band.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Band.Location = new System.Drawing.Point(16, 398);
+            this.Band.Name = "Band";
+            this.Band.Size = new System.Drawing.Size(186, 23);
+            this.Band.TabIndex = 32;
+            this.Band.Text = "Банда";
+            this.Band.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripComboBox8});
+            this.menuStrip1.Location = new System.Drawing.Point(220, 401);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(131, 27);
+            this.menuStrip1.TabIndex = 33;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // toolStripComboBox8
+            // 
+            this.toolStripComboBox8.Name = "toolStripComboBox8";
+            this.toolStripComboBox8.Size = new System.Drawing.Size(121, 23);
             // 
             // AddCR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(425, 500);
+            this.Controls.Add(this.Band);
             this.Controls.Add(this.menu2);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label15);
@@ -481,6 +490,7 @@
             this.Controls.Add(this.menu5);
             this.Controls.Add(this.menu6);
             this.Controls.Add(this.menu7);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.nickname);
             this.Controls.Add(this.surname);
             this.Controls.Add(this.name);
@@ -507,6 +517,8 @@
             this.menu7.ResumeLayout(false);
             this.menu7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.heigth)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -551,5 +563,8 @@
         private System.Windows.Forms.ToolStripComboBox toolStripComboBox5;
         private System.Windows.Forms.ToolStripComboBox toolStripComboBox6;
         private System.Windows.Forms.ToolStripComboBox toolStripComboBox7;
+        private System.Windows.Forms.Label Band;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripComboBox toolStripComboBox8;
     }
 }

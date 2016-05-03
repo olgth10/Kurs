@@ -18,21 +18,8 @@ namespace Kurs.Forms.Criminal
         {
             InitializeComponent();
             Lists crl = new Lists();
-            toolStripComboBox1.Items.Add(crl.ls[0].hair);
-            toolStripComboBox2.Items.Add(crl.ls[0].eyes);
-            toolStripComboBox3.Items.Add(crl.ls[0].nationality);
-            toolStripComboBox4.Items.Add(crl.ls[0].pob);
-            toolStripComboBox5.Items.Add(crl.ls[0].lastlocation);
-            toolStripComboBox6.Items.Add(crl.ls[0].languages);
-            toolStripComboBox7.Items.Add(crl.ls[0].professions);
-            toolStripComboBox1.Items.Add(crl.arch[0].hair);
-            toolStripComboBox2.Items.Add(crl.arch[0].eyes);
-            toolStripComboBox3.Items.Add(crl.arch[0].nationality);
-            toolStripComboBox4.Items.Add(crl.arch[0].pob);
-            toolStripComboBox5.Items.Add(crl.arch[0].lastlocation);
-            toolStripComboBox6.Items.Add(crl.arch[0].languages);
-            toolStripComboBox7.Items.Add(crl.arch[0].professions);
-            for (int i = 1; i < crl.arch.Count; i++)
+
+            for (int i = 0; i < crl.arch.Count; i++)
             {
                 if (toolStripComboBox1.Items.IndexOf(crl.arch[i].hair) == -1)
                 {
@@ -62,8 +49,12 @@ namespace Kurs.Forms.Criminal
                 {
                     toolStripComboBox7.Items.Add(crl.arch[i].professions);
                 }
+                if (toolStripComboBox8.Items.IndexOf(crl.arch[i].band) == -1)
+                {
+                    toolStripComboBox8.Items.Add(crl.arch[i].band);
+                }
             }
-            for (int i = 1; i < crl.ls.Count; i++)
+            for (int i = 0; i < crl.ls.Count; i++)
             {
                 if (toolStripComboBox1.Items.IndexOf(crl.ls[i].hair) == -1)
                 {
@@ -93,7 +84,12 @@ namespace Kurs.Forms.Criminal
                 {
                     toolStripComboBox7.Items.Add(crl.ls[i].professions);
                 }
+                if (toolStripComboBox8.Items.IndexOf(crl.ls[i].band) == -1)
+                {
+                    toolStripComboBox8.Items.Add(crl.ls[i].band);
+                }
             }
+
             if (a != -1)
             {
                 name.Text = crl.ls[a].name;
@@ -110,29 +106,20 @@ namespace Kurs.Forms.Criminal
                 toolStripComboBox6.Text = crl.ls[a].languages;
                 toolStripComboBox7.Text = crl.ls[a].professions;
                 lastdeal.Text = crl.ls[a].lastdeal;
+                toolStripComboBox8.Text = crl.ls[a].band;
                 el = a;
-            }
-            else
-            {
-                MessageBox.Show("Выберите преступника для редактирования!");
-                this.Close();
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Lists crl = new Lists();
-            crl.ls[el].Delete();
-            crl.ls.Remove(crl.ls[el-1]);
-            Kurs.Models.Criminal cr = new Models.Criminal(name.Text, surname.Text, nickname.Text, double.Parse(heigth.Value.ToString()), toolStripComboBox1.Text, toolStripComboBox2.Text, signs.Text, toolStripComboBox3.Text, dateTimePicker1.Value, toolStripComboBox4.Text, toolStripComboBox5.Text, toolStripComboBox6.Text, toolStripComboBox7.Text, lastdeal.Text);
+            crl.ls.Remove(crl.ls[el]);
+            crl.ls[el].Delete();            
+            Kurs.Models.Criminal cr = new Models.Criminal(name.Text, surname.Text, nickname.Text, double.Parse(heigth.Value.ToString()), toolStripComboBox1.Text, toolStripComboBox2.Text, signs.Text, toolStripComboBox3.Text, dateTimePicker1.Value, toolStripComboBox4.Text, toolStripComboBox5.Text, toolStripComboBox6.Text, toolStripComboBox7.Text, lastdeal.Text,toolStripComboBox8.Text);
             cr.Add();
             crl.ls.Add(cr);
             this.DialogResult = DialogResult.OK;
-        }
-
-        private void EditCR_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

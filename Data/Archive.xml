@@ -1,4 +1,55 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <archive>
-  
+  <criminal>
+    <name>Алексей</name>
+    <surname>Федосеев</surname>
+    <nickname />
+    <height>1,65</height>
+    <hair>Брюнет</hair>
+    <eyes>Светлый</eyes>
+    <signs>Сломан нос</signs>
+    <nationality>Беларусь</nationality>
+    <dob>30.06.2000 23:32:06</dob>
+    <pob>Минск, Беларусь</pob>
+    <lastlocation>Минск, Беларусь</lastlocation>
+    <languages>Русский</languages>
+    <professions>Коммерческое мошенничество</professions>
+    <lastdeal />
+    <band>
+    </band>
+  </criminal>
+  <criminal>
+    <name>Леонид</name>
+    <surname>Тимошенко</surname>
+    <nickname />
+    <height>1,75</height>
+    <hair />
+    <eyes />
+    <signs />
+    <nationality>Украина</nationality>
+    <dob>02.05.2016 23:29:35</dob>
+    <pob>Краснодарский край, Россия</pob>
+    <lastlocation>Белгород, Россия</lastlocation>
+    <languages>Русский, Украинский</languages>
+    <professions>Убийца</professions>
+    <lastdeal />
+    <band>Братство справедливости</band>
+  </criminal>
+  <criminal>
+    <name>Вася</name>
+    <surname>Пупкин</surname>
+    <nickname>Репка</nickname>
+    <height>1,9</height>
+    <hair>Брюнет</hair>
+    <eyes>Голубой</eyes>
+    <signs>Шрам на щеке</signs>
+    <nationality>Россия</nationality>
+    <dob>01.04.2016 12:57:50</dob>
+    <pob>Харьков, Украина</pob>
+    <lastlocation>Харьков</lastlocation>
+    <languages>Русский</languages>
+    <professions>Вор</professions>
+    <lastdeal>Кража в супермаркете</lastdeal>
+    <band>Братство справедливости</band>
+  </criminal>
 </archive>

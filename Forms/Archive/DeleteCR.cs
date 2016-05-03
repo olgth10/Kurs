@@ -29,5 +29,10 @@ namespace Kurs.Forms.Archive
             crl.arch[el].DeleteArch();
             Close();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.Abort;
+        }
     }
 }

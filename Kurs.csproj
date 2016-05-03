@@ -75,42 +75,6 @@
     <Compile Include="Forms\Archive\ToListCR.Designer.cs">
       <DependentUpon>ToListCR.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Bands\AddB.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Bands\AddB.Designer.cs">
-      <DependentUpon>AddB.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Bands\AddCRtoB.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Bands\AddCRtoB.Designer.cs">
-      <DependentUpon>AddCRtoB.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Bands\EditB.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Bands\EditB.Designer.cs">
-      <DependentUpon>EditB.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Bands\FindB.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Bands\FindB.Designer.cs">
-      <DependentUpon>FindB.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Bands\FindCRinB.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Bands\FindCRinB.Designer.cs">
-      <DependentUpon>FindCRinB.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Bands\ListB.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Bands\ListB.Designer.cs">
-      <DependentUpon>ListB.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Criminal\AddCR.cs">
       <SubType>Form</SubType>
     </Compile>

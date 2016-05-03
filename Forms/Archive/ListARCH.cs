@@ -21,9 +21,8 @@ namespace Kurs.Forms.Archive
 
         private void button7_Click(object sender, EventArgs e)
         {
-            ListCR lcr = new ListCR();
-            lcr.Show();
-            this.Close();
+            DialogResult = DialogResult.OK;
+            Close();
         }
 
         private void ListARCH_Load(object sender, EventArgs e)
@@ -51,7 +50,7 @@ namespace Kurs.Forms.Archive
             }
             else
             {
-                MessageBox.Show("Выберите преступника для удаления!");
+                MessageBox.Show("Выберите преступника для переноса из архива!");
             }
         }
         private DeleteCR del;
@@ -116,14 +115,65 @@ namespace Kurs.Forms.Archive
                 for (int i = 0; i < fcr.fn.Count; i++)
                 {
                     listBox1.Items.Add(fcr.fn[i].ToString());
-                    button8.Visible = true;
+                    
                 }
+                button8.Visible = true;
             }
         }
-
+        private ChangeInARCH ch;
         private void button2_Click(object sender, EventArgs e)
         {
-            ChangeInARCH ch = new ChangeInARCH();
+            Lists ls = new Lists();
+            if (button8.Visible)
+            {
+                if (listBox1.SelectedIndex != -1)
+                {
+
+                    for (int i = 0; i < ls.arch.Count; i++)
+                    {
+                        if (ls.arch[i].ToString() == listBox1.SelectedItem.ToString())
+                        {
+                            ch = new ChangeInARCH(i);
+                        }
+                    }
+                    if (ch.ShowDialog() == DialogResult.Yes)
+                    {
+                        listBox1.Items.Remove(listBox1.SelectedItem);
+                    }
+                    else
+                    {
+                        ch.Close();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Выберите преступника для изменения!");
+                }
+            }
+            else
+            {
+                ch = new ChangeInARCH(listBox1.SelectedIndex);
+                if (listBox1.SelectedIndex != -1)
+                {
+                    if (ch.ShowDialog() == DialogResult.Yes)
+                    {
+                        listBox1.Items.Remove(listBox1.SelectedItem);
+                    }
+                    else
+                    {
+                        ch.Close();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Выберите преступника для изменения!");
+                }
+            }
+            listBox1.Items.Clear();
+            for (int i = 0; i < ls.arch.Count; i++)
+            {
+                listBox1.Items.Add(ls.arch[i].ToString());
+            }
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -135,6 +185,28 @@ namespace Kurs.Forms.Archive
                 listBox1.Items.Add(crl.arch[i].ToString());
             }
             button8.Visible = false;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Clear();
+            Lists l = new Lists();
+            foreach (Band b in l.lbarch)
+            {
+                if (b.name == "")
+                {
+                    listBox1.Items.Add("Без банды:");
+                }
+                else
+                {
+                    listBox1.Items.Add("Название банды: " + b.name);
+                }
+                foreach (Models.Criminal cr in b.ls)
+                {
+                    listBox1.Items.Add(cr.ToString());
+                }
+            }
+            button8.Visible = true;
         }
     }
 }

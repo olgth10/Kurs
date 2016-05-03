@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Kurs.Forms.Criminal;
-using Kurs.Forms.Bands;
 using Kurs.Models;
 using Kurs.Forms.Archive;
 
@@ -177,17 +176,36 @@ namespace Kurs.Forms.Criminal
                 listBox1.Items.Clear();
                 for (int i = 0; i < fcr.fn.Count; i++)
                 {
-                    listBox1.Items.Add(fcr.fn[i].ToString());
-                    button8.Visible = true;
+                    listBox1.Items.Add(fcr.fn[i].ToString());                    
                 }
+                button8.Visible = true;
             }            
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             ListARCH la = new ListARCH();
-            la.Show();
             Hide();
+            if (la.ShowDialog() == DialogResult.OK)
+            {
+                Show();
+                listBox1.Items.Clear();
+                Lists crl = new Lists();
+                for (int i = 0; i < crl.ls.Count; i++)
+                {
+                    listBox1.Items.Add(crl.ls[i].ToString());
+                }
+            }
+            else
+            {
+                Show();
+                listBox1.Items.Clear();
+                Lists crl = new Lists();
+                for (int i = 0; i < crl.ls.Count; i++)
+                {
+                    listBox1.Items.Add(crl.ls[i].ToString());
+                }
+            }
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -199,6 +217,28 @@ namespace Kurs.Forms.Criminal
                 listBox1.Items.Add(crl.ls[i].ToString());
             }
             button8.Visible = false;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Clear();
+            Lists l = new Lists();
+            foreach (Band b in l.lb)
+            {
+                if (b.name=="")
+                {
+                    listBox1.Items.Add("Без банды:");
+                }
+                else
+                {
+                    listBox1.Items.Add("Название банды: " + b.name);
+                }                
+                foreach (Models.Criminal cr in b.ls)
+                {
+                    listBox1.Items.Add(cr.ToString());
+                }
+            }
+            button8.Visible = true;
         }
     }
 }

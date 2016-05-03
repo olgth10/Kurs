@@ -23,9 +23,10 @@ namespace Kurs.Models
         public string languages;        
         public string professions;
         public string lastdeal;
+        public string band;
 
         #region Конструктор
-        public Criminal(string name1,string surname1,string nickname1,double heigth1,string hair1,string eyes1,string signs1,string nationality1,DateTime dob1,string pob1, string lastlocation1, string languages1, string professions1,string lastdeal1)
+        public Criminal(string name1,string surname1,string nickname1,double heigth1,string hair1,string eyes1,string signs1,string nationality1,DateTime dob1,string pob1, string lastlocation1, string languages1, string professions1,string lastdeal1,string band1)
         {
             name = name1;
             surname = surname1;
@@ -41,6 +42,7 @@ namespace Kurs.Models
             languages = languages1;
             professions = professions1;
             lastdeal = lastdeal1;
+            band = band1;
         }
         #endregion
 
@@ -106,6 +108,10 @@ namespace Kurs.Models
 
             tag = doc.CreateElement("lastdeal");
             tag.InnerText = lastdeal;
+            crim.AppendChild(tag);
+
+            tag = doc.CreateElement("band");
+            tag.InnerText = band;
             crim.AppendChild(tag);
 
             root.AppendChild(crim);
@@ -204,6 +210,7 @@ namespace Kurs.Models
                 if (crl.arch[i].ToString() == ToString())
                 {
                     root.RemoveChild(root.ChildNodes[i]);
+                    break;
                 }
             }
             doc.Save(@"../../Data/Archive.xml");

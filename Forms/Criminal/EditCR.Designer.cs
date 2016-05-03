@@ -500,7 +500,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "EditCR";
-            this.Text = "EditCR";
+            this.Text = "Изменение данных преступника";
             this.menu2.ResumeLayout(false);
             this.menu2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.heigth)).EndInit();

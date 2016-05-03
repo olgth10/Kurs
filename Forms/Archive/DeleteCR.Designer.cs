@@ -72,7 +72,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "DeleteCR";
-            this.Text = "DeleteCR";
+            this.Text = "Удаление преступника";
             this.ResumeLayout(false);
 
         }

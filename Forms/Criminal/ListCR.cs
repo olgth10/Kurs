@@ -26,133 +26,59 @@ namespace Kurs.Forms.Criminal
             if (add.ShowDialog()==DialogResult.OK)
             {
                 Lists crl = new Lists();
-                    listBox1.Items.Add(crl.ls[crl.ls.Count-1].ToString());
-                add.Close();
-            }
-                      
+                listBox1.Items.Add(crl.ls[crl.ls.Count-1].ToString());
+            }                      
         }
-        private EditCR edit;
+
         private void button2_Click(object sender, EventArgs e)
         {
-            Lists ls = new Lists();
-            if (button8.Visible)
-            {
-                if (listBox1.SelectedIndex != -1)
-                {
-
-                    for (int i = 0; i < ls.ls.Count; i++)
-                    {
-                        if (ls.ls[i].ToString() == listBox1.SelectedItem.ToString())
-                        {
-                           edit = new EditCR(i);
-                        }
-                    }
-                    if (edit.ShowDialog() == DialogResult.OK)
-                    {
-                        listBox1.Items.Remove(listBox1.Items[listBox1.SelectedIndex]);
-                        listBox1.Items.Add(ls.ls[ls.ls.Count - 1].ToString());
-                        edit.Close();
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Выберите преступника для редактирования!");
-                }
-            }
-            else
-            {
-                edit = new EditCR(listBox1.SelectedIndex);
-                if (listBox1.SelectedIndex != -1)
-                {
-                    if (edit.ShowDialog() == DialogResult.OK)
-                    {
-                        listBox1.Items.Remove(listBox1.Items[listBox1.SelectedIndex]);
-                        listBox1.Items.Add(ls.ls[ls.ls.Count - 1].ToString());
-                        edit.Close();
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Выберите преступника для редактирования!");
-                }
-            }
-        }
-        private DeleteCR del;
-        private void button3_Click(object sender, EventArgs e)
-        {
-            Lists ls = new Lists();
-            if (button8.Visible)
-            {
-                if (listBox1.SelectedIndex != -1)
-                {
-                    
-                    for (int i = 0; i < ls.ls.Count; i++)
-                    {
-                        if (ls.ls[i].ToString() == listBox1.SelectedItem.ToString())
-                        {
-                            del = new DeleteCR(i);
-                        }
-                    }
-                    if (del.ShowDialog() == DialogResult.Yes)
-                    {
-                        listBox1.Items.Remove(listBox1.SelectedItem);
-                    }
-                    else
-                    {
-                        del.Close();
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Выберите преступника для удаления!");
-                }
-            }
-            else
-            {
-                DeleteCR del = new DeleteCR(listBox1.SelectedIndex);
-                if (listBox1.SelectedIndex != -1)
-                {
-                    if (del.ShowDialog() == DialogResult.Yes)
-                    {
-                        listBox1.Items.Remove(listBox1.SelectedItem);
-                    }
-                    else
-                    {
-                        del.Close();
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Выберите преступника для удаления!");
-                }
-            }
-            
-        }
-        private ArchivCR arch;
-        private void button4_Click(object sender, EventArgs e)
-        {
-            Lists ls = new Lists();
             if (listBox1.SelectedIndex != -1)
             {
-                for (int i = 0; i < ls.ls.Count; i++)
+                Lists ls = new Lists();
+                EditCR edit = new EditCR(listBox1.SelectedItem.ToString());
+
+                if (edit.ShowDialog() == DialogResult.OK)
                 {
-                    if (listBox1.SelectedItem.ToString() == ls.ls[i].ToString())
-                    {
-                        arch= new ArchivCR(i);
-                    }
+                    listBox1.Items.Remove(listBox1.Items[listBox1.SelectedIndex]);
+                    listBox1.Items.Add(ls.ls[ls.ls.Count - 1].ToString());
                 }
+            }
+            else
+            {
+                MessageBox.Show("Выберите преступника для редактирования!");
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedIndex != -1)
+            {
+                DeleteCR del = new DeleteCR(listBox1.SelectedItem.ToString());
+                if (del.ShowDialog() == DialogResult.Yes)
+                {
+                    
+                    listBox1.Items.Remove(listBox1.SelectedItem);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Выберите преступника для удаления!");
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedIndex != -1)
+            {
+                ArchivCR arch = new ArchivCR(listBox1.SelectedItem.ToString());
                 if (arch.ShowDialog() == DialogResult.Yes)
                 {
                     listBox1.Items.Remove(listBox1.SelectedItem);
                 }
-                else
-                {
-                    arch.Close();
-                }
             }
             else
             {
-                MessageBox.Show("Выберите преступника для переноса в архив");
+                MessageBox.Show("Выберите преступника для переноса в архив!");
             }
         }
 

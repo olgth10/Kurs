@@ -13,18 +13,19 @@ namespace Kurs.Forms.Archive
 {
     public partial class ToListCR : Form
     {
-        private int el;
+        private string data;
 
-        public ToListCR(int a)
+        public ToListCR(string s)
         {
             InitializeComponent();
-            el = a;
+            data = s;
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Yes;
             Lists crl = new Lists();
+            int el = crl.FindIndexArch(data);
             crl.arch.Remove(crl.arch[el]);
             crl.arch[el].FromArchive();
             Close();

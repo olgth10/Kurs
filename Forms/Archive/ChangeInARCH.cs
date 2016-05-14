@@ -13,12 +13,13 @@ namespace Kurs.Forms.Archive
 {
     public partial class ChangeInARCH : Form
     {
-        private int el;
-        public ChangeInARCH(int a)
+        private string data;
+        public ChangeInARCH(string s)
         {
             InitializeComponent();
-            el = a;
+            data = s;
             Lists crl = new Lists();
+            int a = crl.FindIndexArch(data);
             if (a != -1)
             {
                 name.Text = crl.arch[a].name;
@@ -118,6 +119,7 @@ namespace Kurs.Forms.Archive
         private void button1_Click(object sender, EventArgs e)
         {
             Lists crl = new Lists();
+            int el= crl.FindIndexArch(data);
             crl.arch.Remove(crl.arch[el]);
             crl.arch[el].DeleteArch();            
             Kurs.Models.Criminal cr = new Models.Criminal(name.Text, surname.Text, nickname.Text, double.Parse(heigth.Value.ToString()), toolStripComboBox1.Text, toolStripComboBox2.Text, signs.Text, toolStripComboBox3.Text, dateTimePicker1.Value, toolStripComboBox4.Text, toolStripComboBox5.Text, toolStripComboBox6.Text, toolStripComboBox7.Text, lastdeal.Text,toolStripComboBox8.Text);

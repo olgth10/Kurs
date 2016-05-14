@@ -13,30 +13,25 @@ namespace Kurs.Forms
 {
     public partial class DeleteCR : Form
     {
-        public int el;
-        public DeleteCR(int a)
+        private string data;
+
+        public DeleteCR(string s)
         {
             InitializeComponent();
-            el = a;
+            data = s;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Yes;
-            Lists crl = new Lists();
-            crl.ls.Remove(crl.ls[el]);
-            crl.ls[el].Delete();            
+            Lists ls = new Lists();
+            ls.ls[ls.FindIndex(data)].Delete();
             Close();            
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.No;
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

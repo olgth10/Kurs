@@ -52,4 +52,21 @@
     <lastdeal>Кража в супермаркете</lastdeal>
     <band>Братство справедливости</band>
   </criminal>
+  <criminal>
+    <name>Александр</name>
+    <surname>Кушнир</surname>
+    <nickname />
+    <height>1,7</height>
+    <hair>Крашеный</hair>
+    <eyes>Серый</eyes>
+    <signs />
+    <nationality>Украина</nationality>
+    <dob>17.07.1975 23:21:12</dob>
+    <pob>Киев, Украина</pob>
+    <lastlocation />
+    <languages>Украинский</languages>
+    <professions>Вор</professions>
+    <lastdeal>Разбойное нападение</lastdeal>
+    <band>Речное братство</band>
+  </criminal>
 </archive>

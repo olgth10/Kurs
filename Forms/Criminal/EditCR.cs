@@ -13,11 +13,14 @@ namespace Kurs.Forms.Criminal
 {
     public partial class EditCR : Form
     {
-        private int el;
-        public EditCR(int a)
+        private string data;
+
+        public EditCR(string s)
         {
             InitializeComponent();
             Lists crl = new Lists();
+
+            data = s;
 
             for (int i = 0; i < crl.arch.Count; i++)
             {
@@ -90,7 +93,8 @@ namespace Kurs.Forms.Criminal
                 }
             }
 
-            if (a != -1)
+            int a = crl.FindIndex(data);
+            if (a!=-1)
             {
                 name.Text = crl.ls[a].name;
                 surname.Text = crl.ls[a].surname;
@@ -107,19 +111,20 @@ namespace Kurs.Forms.Criminal
                 toolStripComboBox7.Text = crl.ls[a].professions;
                 lastdeal.Text = crl.ls[a].lastdeal;
                 toolStripComboBox8.Text = crl.ls[a].band;
-                el = a;
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Lists crl = new Lists();
+            int el = crl.FindIndex(data);
             crl.ls.Remove(crl.ls[el]);
             crl.ls[el].Delete();            
             Kurs.Models.Criminal cr = new Models.Criminal(name.Text, surname.Text, nickname.Text, double.Parse(heigth.Value.ToString()), toolStripComboBox1.Text, toolStripComboBox2.Text, signs.Text, toolStripComboBox3.Text, dateTimePicker1.Value, toolStripComboBox4.Text, toolStripComboBox5.Text, toolStripComboBox6.Text, toolStripComboBox7.Text, lastdeal.Text,toolStripComboBox8.Text);
             cr.Add();
             crl.ls.Add(cr);
             DialogResult = DialogResult.OK;
+            Close();
         }
     }
 }

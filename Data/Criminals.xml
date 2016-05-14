@@ -1,26 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <criminals>
   <criminal>
-    <name>Александр</name>
-    <surname>Кушнир</surname>
-    <nickname>
-    </nickname>
-    <height>1,7</height>
-    <hair>Крашеный</hair>
-    <eyes>Серый</eyes>
-    <signs>
-    </signs>
-    <nationality>Украина</nationality>
-    <dob>17.07.1975 23:21:12</dob>
-    <pob>Киев, Украина</pob>
-    <lastlocation>
-    </lastlocation>
-    <languages>Украинский</languages>
-    <professions>Вор</professions>
-    <lastdeal>Разбойное нападение</lastdeal>
-    <band>Речное братство</band>
-  </criminal>
-  <criminal>
     <name>Сергей</name>
     <surname>Бровко</surname>
     <nickname>
@@ -67,23 +47,6 @@
     </band>
   </criminal>
   <criminal>
-    <name>Дмитрий</name>
-    <surname>Коровин</surname>
-    <nickname />
-    <height>1,9</height>
-    <hair>Тёмный</hair>
-    <eyes>Светлый</eyes>
-    <signs>Толстый</signs>
-    <nationality>Украина</nationality>
-    <dob>05.05.1967 21:06:45</dob>
-    <pob>Украина</pob>
-    <lastlocation />
-    <languages>Украинский</languages>
-    <professions>Убийца</professions>
-    <lastdeal>Заранее спланированное убийство</lastdeal>
-    <band>Речное братство</band>
-  </criminal>
-  <criminal>
     <name>Михаил</name>
     <surname>Цыкуль</surname>
     <nickname>
@@ -104,5 +67,22 @@
     </lastdeal>
     <band>
     </band>
+  </criminal>
+  <criminal>
+    <name>Дмитрий</name>
+    <surname>Коровин</surname>
+    <nickname />
+    <height>1,9</height>
+    <hair>Тёмный</hair>
+    <eyes>Светлый</eyes>
+    <signs>Толстый</signs>
+    <nationality>Украина</nationality>
+    <dob>05.05.1967 21:06:45</dob>
+    <pob>Украина</pob>
+    <lastlocation />
+    <languages>Украинский</languages>
+    <professions>Убийца</professions>
+    <lastdeal>Заранее спланированное убийство</lastdeal>
+    <band />
   </criminal>
 </criminals>

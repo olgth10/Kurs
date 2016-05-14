@@ -9,6 +9,8 @@ namespace Kurs.Models
 {
     class Lists
     {
+
+        #region Список преступников
         public List<Criminal> ls
         {
             get
@@ -25,7 +27,9 @@ namespace Kurs.Models
                 return l;
             }
         }
+        #endregion
 
+        #region Список преступников в архиве
         public List<Criminal> arch
         {
             get
@@ -42,6 +46,10 @@ namespace Kurs.Models
                 return l;
             }
         }
+
+        #endregion
+
+        #region Список банд
         private bool c;
         public List<Band> lb
         {
@@ -77,6 +85,10 @@ namespace Kurs.Models
                 return l;
             }
         }
+
+        #endregion
+
+        #region Список банд в архиве
         public List<Band> lbarch
         {
             get
@@ -111,6 +123,7 @@ namespace Kurs.Models
                 return l;
             }
         }
+        #endregion
 
         #region Поиск преступника
         public List<Criminal> Find(Criminal cr)
@@ -127,6 +140,7 @@ namespace Kurs.Models
         }
         #endregion
 
+        #region Поиск преступника в архиве
         public List<Criminal> Findarch(Criminal cr)
         {
             List<Criminal> finded = new List<Criminal>();
@@ -139,5 +153,34 @@ namespace Kurs.Models
             }
             return finded;
         }
+        #endregion
+
+        #region Поиск индекса преступника
+        public int FindIndex(string cr)
+        {
+            for (int i = 0; i < ls.Count; i++)
+            {
+                if (ls[i].ToString() == cr)
+                {
+                    return i;
+                }
+            }
+            return -1;
+        }
+        #endregion
+
+        #region Поиск индекса преступника в архиве
+        public int FindIndexArch(string cr)
+        {
+            for (int i = 0; i < arch.Count; i++)
+            {
+                if (arch[i].ToString() == cr)
+                {
+                    return i;
+                }
+            }
+            return -1;
+        }
+        #endregion
     }
 }

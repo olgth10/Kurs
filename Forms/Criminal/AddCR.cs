@@ -22,10 +22,10 @@ namespace Kurs.Forms
         {
             Models.Criminal cr = new Models.Criminal(name.Text, surname.Text, nickname.Text, double.Parse(heigth.Value.ToString()), toolStripComboBox1.Text, toolStripComboBox2.Text, signs.Text, toolStripComboBox3.Text, dateTimePicker1.Value,toolStripComboBox4.Text,toolStripComboBox5.Text, toolStripComboBox6.Text, toolStripComboBox7.Text, lastdeal.Text,toolStripComboBox8.Text);
             cr.Add();
-            Lists crl = new Lists();
-            crl.ls.Add(cr);
-            this.DialogResult = DialogResult.OK;
+            DialogResult = DialogResult.OK;
+            Close();
         }
+
         private void AddCR_Load(object sender, EventArgs e)
         {
             Lists crl = new Lists();
@@ -65,6 +65,7 @@ namespace Kurs.Forms
                     toolStripComboBox8.Items.Add(crl.arch[i].band);
                 }
             }
+
             for (int i = 0; i < crl.ls.Count; i++)
             {
                 if (toolStripComboBox1.Items.IndexOf(crl.ls[i].hair) == -1)

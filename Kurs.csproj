@@ -173,7 +173,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Data\Archive.xml" />
-    <Content Include="Data\Bands.xml" />
     <Content Include="Data\Criminals.xml">
       <SubType>Designer</SubType>
     </Content>

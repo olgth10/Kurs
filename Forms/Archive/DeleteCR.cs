@@ -23,16 +23,21 @@ namespace Kurs.Forms.Archive
         private void button1_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Yes;
-            Lists crl = new Lists();
-            int el = crl.FindIndexArch(data);
-            crl.arch.Remove(crl.arch[el]);
-            crl.arch[el].DeleteArch();
+            Lists lists = new Lists();
+            int el = lists.FindIndexArch(data);
+            lists.ArchiveList.Remove(lists.ArchiveList[el]);
+            lists.ArchiveList[el].DeleteArch();
             Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.No;
+        }
+
+        private void DeleteCR_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            MessageBox.Show("Форма для удаления преступника. При нажатии кнопки преступник со всеми данными о нём будет удалён.");
         }
     }
 }

@@ -1,6 +1,6 @@
-﻿namespace Kurs.Forms
+﻿namespace Kurs.Forms.Actual
 {
-    partial class ArchivCR
+    partial class ArchiveCR
     {
         /// <summary>
         /// Required designer variable.
@@ -36,43 +36,44 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(17, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(367, 23);
-            this.label1.TabIndex = 5;
+            this.label1.TabIndex = 11;
             this.label1.Text = "Перенести преступника в архив?";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(254, 59);
+            this.button2.Location = new System.Drawing.Point(259, 60);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(87, 31);
-            this.button2.TabIndex = 4;
+            this.button2.TabIndex = 10;
             this.button2.Text = "Нет";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(49, 59);
+            this.button1.Location = new System.Drawing.Point(54, 60);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(87, 31);
-            this.button1.TabIndex = 3;
+            this.button1.TabIndex = 9;
             this.button1.Text = "Да";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // ArchivCR
+            // ArchiveCR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(399, 130);
+            this.ClientSize = new System.Drawing.Size(400, 100);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Name = "ArchivCR";
+            this.Name = "ArchiveCR";
             this.Text = "Перенос преступника в архив";
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.ArchiveCR_HelpRequested);
             this.ResumeLayout(false);
 
         }

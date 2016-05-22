@@ -11,95 +11,97 @@ using Kurs.Models;
 
 namespace Kurs.Forms.Archive
 {
-    public partial class FindARCH : Form
+    public partial class FindInArchive : Form
     {
-        public FindARCH()
+        public FindInArchive()
         {
             InitializeComponent();
+
+            Lists lists = new Lists();
+
+            for (int i = 0; i < lists.ArchiveList.Count; i++)
+            {
+                if (toolStripComboBox1.Items.IndexOf(lists.ArchiveList[i].hair) == -1)
+                {
+                    toolStripComboBox1.Items.Add(lists.ArchiveList[i].hair);
+                }
+                if (toolStripComboBox2.Items.IndexOf(lists.ArchiveList[i].eyes) == -1)
+                {
+                    toolStripComboBox2.Items.Add(lists.ArchiveList[i].eyes);
+                }
+                if (toolStripComboBox3.Items.IndexOf(lists.ArchiveList[i].nationality) == -1)
+                {
+                    toolStripComboBox3.Items.Add(lists.ArchiveList[i].nationality);
+                }
+                if (toolStripComboBox4.Items.IndexOf(lists.ArchiveList[i].pob) == -1)
+                {
+                    toolStripComboBox4.Items.Add(lists.ArchiveList[i].pob);
+                }
+                if (toolStripComboBox5.Items.IndexOf(lists.ArchiveList[i].lastlocation) == -1)
+                {
+                    toolStripComboBox5.Items.Add(lists.ArchiveList[i].lastlocation);
+                }
+                if (toolStripComboBox6.Items.IndexOf(lists.ArchiveList[i].languages) == -1)
+                {
+                    toolStripComboBox6.Items.Add(lists.ArchiveList[i].languages);
+                }
+                if (toolStripComboBox7.Items.IndexOf(lists.ArchiveList[i].professions) == -1)
+                {
+                    toolStripComboBox7.Items.Add(lists.ArchiveList[i].professions);
+                }
+                if (toolStripComboBox8.Items.IndexOf(lists.ArchiveList[i].band) == -1)
+                {
+                    toolStripComboBox8.Items.Add(lists.ArchiveList[i].band);
+                }
+            }
+            for (int i = 0; i < lists.CriminalList.Count; i++)
+            {
+                if (toolStripComboBox1.Items.IndexOf(lists.CriminalList[i].hair) == -1)
+                {
+                    toolStripComboBox1.Items.Add(lists.CriminalList[i].hair);
+                }
+                if (toolStripComboBox2.Items.IndexOf(lists.CriminalList[i].eyes) == -1)
+                {
+                    toolStripComboBox2.Items.Add(lists.CriminalList[i].eyes);
+                }
+                if (toolStripComboBox3.Items.IndexOf(lists.CriminalList[i].nationality) == -1)
+                {
+                    toolStripComboBox3.Items.Add(lists.CriminalList[i].nationality);
+                }
+                if (toolStripComboBox4.Items.IndexOf(lists.CriminalList[i].pob) == -1)
+                {
+                    toolStripComboBox4.Items.Add(lists.CriminalList[i].pob);
+                }
+                if (toolStripComboBox5.Items.IndexOf(lists.CriminalList[i].lastlocation) == -1)
+                {
+                    toolStripComboBox5.Items.Add(lists.CriminalList[i].lastlocation);
+                }
+                if (toolStripComboBox6.Items.IndexOf(lists.CriminalList[i].languages) == -1)
+                {
+                    toolStripComboBox6.Items.Add(lists.CriminalList[i].languages);
+                }
+                if (toolStripComboBox7.Items.IndexOf(lists.CriminalList[i].professions) == -1)
+                {
+                    toolStripComboBox7.Items.Add(lists.CriminalList[i].professions);
+                }
+                if (toolStripComboBox8.Items.IndexOf(lists.CriminalList[i].band) == -1)
+                {
+                    toolStripComboBox8.Items.Add(lists.CriminalList[i].band);
+                }
+            }
         }
-        public List<Models.Criminal> fn;
+        public List<Criminal> fn;
         private void button1_Click(object sender, EventArgs e)
         {
-            Kurs.Models.Criminal cr = new Models.Criminal(name.Text, surname.Text, nickname.Text, double.Parse(heigth.Value.ToString()), toolStripComboBox1.Text, toolStripComboBox2.Text, signs.Text, toolStripComboBox3.Text, dateTimePicker1.Value, toolStripComboBox4.Text, toolStripComboBox5.Text, toolStripComboBox6.Text, toolStripComboBox7.Text, lastdeal.Text,toolStripComboBox8.Text);
-            Lists crl = new Lists();
-            fn = crl.Findarch(cr);
+            Criminal cr = new Criminal(name.Text, surname.Text, nickname.Text, double.Parse(heigth.Value.ToString()), toolStripComboBox1.Text, toolStripComboBox2.Text, signs.Text, toolStripComboBox3.Text, dateTimePicker1.Value, toolStripComboBox4.Text, toolStripComboBox5.Text, toolStripComboBox6.Text, toolStripComboBox7.Text, lastdeal.Text,toolStripComboBox8.Text);
+            Lists lists = new Lists();
+            fn = lists.FindInArchive(cr);
             DialogResult = DialogResult.OK;
         }
 
-        private void FindARCH_Load(object sender, EventArgs e)
+        private void FindInArchive_HelpRequested(object sender, HelpEventArgs hlpevent)
         {
-            Lists crl = new Lists();
-
-            for (int i = 0; i < crl.arch.Count; i++)
-            {
-                if (toolStripComboBox1.Items.IndexOf(crl.arch[i].hair) == -1)
-                {
-                    toolStripComboBox1.Items.Add(crl.arch[i].hair);
-                }
-                if (toolStripComboBox2.Items.IndexOf(crl.arch[i].eyes) == -1)
-                {
-                    toolStripComboBox2.Items.Add(crl.arch[i].eyes);
-                }
-                if (toolStripComboBox3.Items.IndexOf(crl.arch[i].nationality) == -1)
-                {
-                    toolStripComboBox3.Items.Add(crl.arch[i].nationality);
-                }
-                if (toolStripComboBox4.Items.IndexOf(crl.arch[i].pob) == -1)
-                {
-                    toolStripComboBox4.Items.Add(crl.arch[i].pob);
-                }
-                if (toolStripComboBox5.Items.IndexOf(crl.arch[i].lastlocation) == -1)
-                {
-                    toolStripComboBox5.Items.Add(crl.arch[i].lastlocation);
-                }
-                if (toolStripComboBox6.Items.IndexOf(crl.arch[i].languages) == -1)
-                {
-                    toolStripComboBox6.Items.Add(crl.arch[i].languages);
-                }
-                if (toolStripComboBox7.Items.IndexOf(crl.arch[i].professions) == -1)
-                {
-                    toolStripComboBox7.Items.Add(crl.arch[i].professions);
-                }
-                if (toolStripComboBox8.Items.IndexOf(crl.arch[i].band) == -1)
-                {
-                    toolStripComboBox8.Items.Add(crl.arch[i].band);
-                }
-            }
-            for (int i = 0; i < crl.ls.Count; i++)
-            {
-                if (toolStripComboBox1.Items.IndexOf(crl.ls[i].hair) == -1)
-                {
-                    toolStripComboBox1.Items.Add(crl.ls[i].hair);
-                }
-                if (toolStripComboBox2.Items.IndexOf(crl.ls[i].eyes) == -1)
-                {
-                    toolStripComboBox2.Items.Add(crl.ls[i].eyes);
-                }
-                if (toolStripComboBox3.Items.IndexOf(crl.ls[i].nationality) == -1)
-                {
-                    toolStripComboBox3.Items.Add(crl.ls[i].nationality);
-                }
-                if (toolStripComboBox4.Items.IndexOf(crl.ls[i].pob) == -1)
-                {
-                    toolStripComboBox4.Items.Add(crl.ls[i].pob);
-                }
-                if (toolStripComboBox5.Items.IndexOf(crl.ls[i].lastlocation) == -1)
-                {
-                    toolStripComboBox5.Items.Add(crl.ls[i].lastlocation);
-                }
-                if (toolStripComboBox6.Items.IndexOf(crl.ls[i].languages) == -1)
-                {
-                    toolStripComboBox6.Items.Add(crl.ls[i].languages);
-                }
-                if (toolStripComboBox7.Items.IndexOf(crl.ls[i].professions) == -1)
-                {
-                    toolStripComboBox7.Items.Add(crl.ls[i].professions);
-                }
-                if (toolStripComboBox8.Items.IndexOf(crl.ls[i].band) == -1)
-                {
-                    toolStripComboBox8.Items.Add(crl.ls[i].band);
-                }
-            }
+            MessageBox.Show("Форма для поиска преступника в архиве. Поиск осуществляется по любому подмножеству критериев.");
         }
     }
 }

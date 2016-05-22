@@ -1,6 +1,6 @@
 ﻿namespace Kurs.Forms.Archive
 {
-    partial class FindARCH
+    partial class FindInArchive
     {
         /// <summary>
         /// Required designer variable.
@@ -98,10 +98,14 @@
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(208, 223);
+            this.dateTimePicker1.MaxDate = new System.DateTime(2016, 5, 22, 0, 0, 0, 0);
+            this.dateTimePicker1.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 74;
+            this.dateTimePicker1.Value = new System.DateTime(2016, 5, 22, 0, 0, 0, 0);
             // 
             // label15
             // 
@@ -454,7 +458,7 @@
             this.toolStripComboBox8.Name = "toolStripComboBox8";
             this.toolStripComboBox8.Size = new System.Drawing.Size(121, 23);
             // 
-            // FindARCH
+            // FindInArchive
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -491,9 +495,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "FindARCH";
+            this.Name = "FindInArchive";
             this.Text = "Поиск преступника в архиве";
-            this.Load += new System.EventHandler(this.FindARCH_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FindInArchive_HelpRequested);
             this.menu2.ResumeLayout(false);
             this.menu2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.heigth)).EndInit();

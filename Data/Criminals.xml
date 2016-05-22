@@ -19,8 +19,7 @@
     <professions>
     </professions>
     <lastdeal>Нанесение тяжких телесных повреждений</lastdeal>
-    <band>
-    </band>
+    <band>Речное братство</band>
   </criminal>
   <criminal>
     <name>Роман</name>
@@ -35,7 +34,7 @@
     </signs>
     <nationality>
     </nationality>
-    <dob>14.09.1975 23:10:26</dob>
+    <dob>14.09.1975</dob>
     <pob>Ивано-Франковская область, Украина</pob>
     <lastlocation>
     </lastlocation>
@@ -57,7 +56,7 @@
     <signs>
     </signs>
     <nationality>Украина</nationality>
-    <dob>20.01.1986 23:24:01</dob>
+    <dob>20.01.1986</dob>
     <pob>Полтава, Украина</pob>
     <lastlocation>
     </lastlocation>
@@ -65,24 +64,6 @@
     <professions>Мошенник</professions>
     <lastdeal>
     </lastdeal>
-    <band>
-    </band>
-  </criminal>
-  <criminal>
-    <name>Дмитрий</name>
-    <surname>Коровин</surname>
-    <nickname />
-    <height>1,9</height>
-    <hair>Тёмный</hair>
-    <eyes>Светлый</eyes>
-    <signs>Толстый</signs>
-    <nationality>Украина</nationality>
-    <dob>05.05.1967 21:06:45</dob>
-    <pob>Украина</pob>
-    <lastlocation />
-    <languages>Украинский</languages>
-    <professions>Убийца</professions>
-    <lastdeal>Заранее спланированное убийство</lastdeal>
-    <band />
+    <band>Речное братство</band>
   </criminal>
 </criminals>

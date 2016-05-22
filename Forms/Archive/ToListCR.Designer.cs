@@ -73,6 +73,7 @@
             this.Controls.Add(this.button4);
             this.Name = "ToListCR";
             this.Text = "Перенос преступника из архива";
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.ToListCR_HelpRequested);
             this.ResumeLayout(false);
 
         }

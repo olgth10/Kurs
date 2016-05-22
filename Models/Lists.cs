@@ -11,7 +11,7 @@ namespace Kurs.Models
     {
 
         #region Список преступников
-        public List<Criminal> ls
+        public List<Criminal> CriminalList
         {
             get
             {
@@ -30,7 +30,7 @@ namespace Kurs.Models
         #endregion
 
         #region Список преступников в архиве
-        public List<Criminal> arch
+        public List<Criminal> ArchiveList
         {
             get
             {
@@ -51,18 +51,18 @@ namespace Kurs.Models
 
         #region Список банд
         private bool c;
-        public List<Band> lb
+        public List<Band> BandsList
         {
             get
             {
                 List<Band> l = new List<Band>();
                 int k = 0;
-                for (int i = 0; i < ls.Count; i++)
+                for (int i = 0; i < CriminalList.Count; i++)
                 {
                     c = true;
                     for (int n = 0; n < l.Count; n++)
                     {
-                        if (ls[i].band==l[n].name)
+                        if (CriminalList[i].band==l[n].name)
                         {
                             c = false;
                             break;
@@ -70,12 +70,12 @@ namespace Kurs.Models
                     }
                     if (c)
                     {
-                        l.Add(new Band(ls[i].band));
-                        for (int j = i; j < ls.Count; j++)
+                        l.Add(new Band(CriminalList[i].band));
+                        for (int j = i; j < CriminalList.Count; j++)
                         {
-                            if (ls[j].band == l[k].name)
+                            if (CriminalList[j].band == l[k].name)
                             {
-                                l[k].ls.Add(ls[j]);
+                                l[k].CriminalList.Add(CriminalList[j]);
                             }
                         }
                         k++;
@@ -89,18 +89,18 @@ namespace Kurs.Models
         #endregion
 
         #region Список банд в архиве
-        public List<Band> lbarch
+        public List<Band> BandsInArchiveList
         {
             get
             {
                 List<Band> l = new List<Band>();
                 int k = 0;
-                for (int i = 0; i < arch.Count; i++)
+                for (int i = 0; i < ArchiveList.Count; i++)
                 {
                     c = true;
                     for (int n = 0; n < l.Count; n++)
                     {
-                        if (arch[i].band == l[n].name)
+                        if (ArchiveList[i].band == l[n].name)
                         {
                             c = false;
                             break;
@@ -108,12 +108,12 @@ namespace Kurs.Models
                     }
                     if (c)
                     {
-                        l.Add(new Band(arch[i].band));
-                        for (int j = i; j < arch.Count; j++)
+                        l.Add(new Band(ArchiveList[i].band));
+                        for (int j = i; j < ArchiveList.Count; j++)
                         {
-                            if (arch[j].band == l[k].name)
+                            if (ArchiveList[j].band == l[k].name)
                             {
-                                l[k].ls.Add(arch[j]);
+                                l[k].CriminalList.Add(ArchiveList[j]);
                             }
                         }
                         k++;
@@ -129,11 +129,11 @@ namespace Kurs.Models
         public List<Criminal> Find(Criminal cr)
         {
             List<Criminal> finded = new List<Criminal>();
-            for (int i = 0; i < ls.Count; i++)
+            for (int i = 0; i < CriminalList.Count; i++)
             {
-                if (ls[i].name.ToLower().Contains(cr.name.Trim(' ').ToLower()) && ls[i].surname.ToLower().Contains(cr.surname.Trim(' ').ToLower()) && ls[i].nickname.ToLower().Contains(cr.nickname.Trim(' ').ToLower()) && ls[i].hair.ToLower().Contains(cr.hair.Trim(' ').ToLower()) && ls[i].eyes.ToLower().Contains(cr.eyes.Trim(' ').ToLower()) && ls[i].signs.ToLower().Contains(cr.signs.Trim(' ').ToLower()) && ls[i].nationality.ToLower().Contains(cr.nationality.Trim(' ').ToLower()) && ls[i].pob.ToLower().Contains(cr.pob.Trim(' ').ToLower()) && ls[i].lastlocation.ToLower().Contains(cr.lastlocation.Trim(' ').ToLower()) && ls[i].languages.ToLower().Contains(cr.languages.Trim(' ').ToLower()) && ls[i].professions.ToLower().Contains(cr.professions.Trim(' ').ToLower()) && ls[i].lastdeal.ToLower().Contains(cr.lastdeal.Trim(' ').ToLower()) && ls[i].heigth.ToString().Contains(cr.heigth.ToString()))
+                if (CriminalList[i].name.ToLower().Contains(cr.name.Trim(' ').ToLower()) && CriminalList[i].surname.ToLower().Contains(cr.surname.Trim(' ').ToLower()) && CriminalList[i].nickname.ToLower().Contains(cr.nickname.Trim(' ').ToLower()) && CriminalList[i].hair.ToLower().Contains(cr.hair.Trim(' ').ToLower()) && CriminalList[i].eyes.ToLower().Contains(cr.eyes.Trim(' ').ToLower()) && CriminalList[i].signs.ToLower().Contains(cr.signs.Trim(' ').ToLower()) && CriminalList[i].nationality.ToLower().Contains(cr.nationality.Trim(' ').ToLower()) && CriminalList[i].pob.ToLower().Contains(cr.pob.Trim(' ').ToLower()) && CriminalList[i].lastlocation.ToLower().Contains(cr.lastlocation.Trim(' ').ToLower()) && CriminalList[i].languages.ToLower().Contains(cr.languages.Trim(' ').ToLower()) && CriminalList[i].professions.ToLower().Contains(cr.professions.Trim(' ').ToLower()) && CriminalList[i].lastdeal.ToLower().Contains(cr.lastdeal.Trim(' ').ToLower()) && CriminalList[i].heigth.ToString().Contains(cr.heigth.ToString()) && (CriminalList[i].dob.Year==cr.dob.Year || CriminalList[i].dob.Month==cr.dob.Month || CriminalList[i].dob.Day==cr.dob.Day))
                 {
-                    finded.Add(ls[i]);
+                    finded.Add(CriminalList[i]);
                 }
             }
             return finded;
@@ -141,14 +141,14 @@ namespace Kurs.Models
         #endregion
 
         #region Поиск преступника в архиве
-        public List<Criminal> Findarch(Criminal cr)
+        public List<Criminal> FindInArchive(Criminal cr)
         {
             List<Criminal> finded = new List<Criminal>();
-            for (int i = 0; i < arch.Count; i++)
+            for (int i = 0; i < ArchiveList.Count; i++)
             {
-                if (arch[i].name.ToLower().Contains(cr.name.Trim(' ').ToLower()) && arch[i].surname.ToLower().Contains(cr.surname.Trim(' ').ToLower()) && arch[i].nickname.ToLower().Contains(cr.nickname.Trim(' ').ToLower()) && arch[i].hair.ToLower().Contains(cr.hair.Trim(' ').ToLower()) && arch[i].eyes.ToLower().Contains(cr.eyes.Trim(' ').ToLower()) && arch[i].signs.ToLower().Contains(cr.signs.Trim(' ').ToLower()) && arch[i].nationality.ToLower().Contains(cr.nationality.Trim(' ').ToLower()) && arch[i].pob.ToLower().Contains(cr.pob.Trim(' ').ToLower()) && arch[i].lastlocation.ToLower().Contains(cr.lastlocation.Trim(' ').ToLower()) && arch[i].languages.ToLower().Contains(cr.languages.Trim(' ').ToLower()) && arch[i].professions.ToLower().Contains(cr.professions.Trim(' ').ToLower()) && arch[i].lastdeal.ToLower().Contains(cr.lastdeal.Trim(' ').ToLower()))
+                if (ArchiveList[i].name.ToLower().Contains(cr.name.Trim(' ').ToLower()) && ArchiveList[i].surname.ToLower().Contains(cr.surname.Trim(' ').ToLower()) && ArchiveList[i].nickname.ToLower().Contains(cr.nickname.Trim(' ').ToLower()) && ArchiveList[i].hair.ToLower().Contains(cr.hair.Trim(' ').ToLower()) && ArchiveList[i].eyes.ToLower().Contains(cr.eyes.Trim(' ').ToLower()) && ArchiveList[i].signs.ToLower().Contains(cr.signs.Trim(' ').ToLower()) && ArchiveList[i].nationality.ToLower().Contains(cr.nationality.Trim(' ').ToLower()) && ArchiveList[i].pob.ToLower().Contains(cr.pob.Trim(' ').ToLower()) && ArchiveList[i].lastlocation.ToLower().Contains(cr.lastlocation.Trim(' ').ToLower()) && ArchiveList[i].languages.ToLower().Contains(cr.languages.Trim(' ').ToLower()) && ArchiveList[i].professions.ToLower().Contains(cr.professions.Trim(' ').ToLower()) && ArchiveList[i].lastdeal.ToLower().Contains(cr.lastdeal.Trim(' ').ToLower()))
                 {
-                    finded.Add(arch[i]);
+                    finded.Add(ArchiveList[i]);
                 }
             }
             return finded;
@@ -158,9 +158,9 @@ namespace Kurs.Models
         #region Поиск индекса преступника
         public int FindIndex(string cr)
         {
-            for (int i = 0; i < ls.Count; i++)
+            for (int i = 0; i < CriminalList.Count; i++)
             {
-                if (ls[i].ToString() == cr)
+                if (CriminalList[i].ToString() == cr)
                 {
                     return i;
                 }
@@ -172,9 +172,9 @@ namespace Kurs.Models
         #region Поиск индекса преступника в архиве
         public int FindIndexArch(string cr)
         {
-            for (int i = 0; i < arch.Count; i++)
+            for (int i = 0; i < ArchiveList.Count; i++)
             {
-                if (arch[i].ToString() == cr)
+                if (ArchiveList[i].ToString() == cr)
                 {
                     return i;
                 }

@@ -1,47 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Kurs.Models;
 
-namespace Kurs.Forms.Archive
+namespace Kurs.Forms.Actual
 {
-    public partial class ChangeInARCH : Form
+    public partial class AddCR : Form
     {
-        private string data;
-        public ChangeInARCH(string s)
+        public AddCR()
         {
             InitializeComponent();
-            data = s;
-            Lists lists = new Lists();
-            int a = lists.FindIndexArch(data);
-            if (a != -1)
-            {
-                name.Text = lists.ArchiveList[a].name;
-                surname.Text = lists.ArchiveList[a].surname;
-                nickname.Text = lists.ArchiveList[a].nickname;
-                heigth.Value = decimal.Parse(lists.ArchiveList[a].heigth.ToString());
-                toolStripComboBox1.Text = lists.ArchiveList[a].hair;
-                toolStripComboBox2.Text = lists.ArchiveList[a].eyes;
-                signs.Text = lists.ArchiveList[a].signs;
-                toolStripComboBox3.Text = lists.ArchiveList[a].nationality;
-                dateTimePicker1.Value = lists.ArchiveList[a].dob;
-                toolStripComboBox4.Text = lists.ArchiveList[a].pob;
-                toolStripComboBox5.Text = lists.ArchiveList[a].lastlocation;
-                toolStripComboBox6.Text = lists.ArchiveList[a].languages;
-                toolStripComboBox7.Text = lists.ArchiveList[a].professions;
-                lastdeal.Text = lists.ArchiveList[a].lastdeal;
-                toolStripComboBox8.Text = lists.ArchiveList[a].band;
-            }            
-        }
 
-        private void ChangeInARCH_Load(object sender, EventArgs e)
-        {
             Lists lists = new Lists();
 
             for (int i = 0; i < lists.ArchiveList.Count; i++)
@@ -79,6 +47,7 @@ namespace Kurs.Forms.Archive
                     toolStripComboBox8.Items.Add(lists.ArchiveList[i].band);
                 }
             }
+
             for (int i = 0; i < lists.CriminalList.Count; i++)
             {
                 if (toolStripComboBox1.Items.IndexOf(lists.CriminalList[i].hair) == -1)
@@ -118,20 +87,22 @@ namespace Kurs.Forms.Archive
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Lists lists = new Lists();
-            int el= lists.FindIndexArch(data);
-            lists.ArchiveList.Remove(lists.ArchiveList[el]);
-            lists.ArchiveList[el].DeleteArch();            
-            Criminal cr = new Criminal(name.Text, surname.Text, nickname.Text, double.Parse(heigth.Value.ToString()), toolStripComboBox1.Text, toolStripComboBox2.Text, signs.Text, toolStripComboBox3.Text, dateTimePicker1.Value, toolStripComboBox4.Text, toolStripComboBox5.Text, toolStripComboBox6.Text, toolStripComboBox7.Text, lastdeal.Text,toolStripComboBox8.Text);
-            cr.Add();
-            cr.ToArchive();
-            lists.ArchiveList.Add(cr);
-            DialogResult = DialogResult.OK;
+            if (name.Text == "" && surname.Text == "" && nickname.Text == "")
+            {
+                MessageBox.Show("Для добавления преступника требуется указать хотя имя или фамилию или кличку!");
+            }
+            else
+            {
+                Criminal cr = new Criminal(name.Text, surname.Text, nickname.Text, double.Parse(heigth.Value.ToString()), toolStripComboBox1.Text, toolStripComboBox2.Text, signs.Text, toolStripComboBox3.Text, dateTimePicker1.Value, toolStripComboBox4.Text, toolStripComboBox5.Text, toolStripComboBox6.Text, toolStripComboBox7.Text, lastdeal.Text, toolStripComboBox8.Text);
+                cr.Add();
+                DialogResult = DialogResult.OK;
+                Close();
+            }
         }
 
-        private void ChangeInARCH_HelpRequested(object sender, HelpEventArgs hlpevent)
+        private void AddCR_HelpRequested(object sender, HelpEventArgs hlpevent)
         {
-            MessageBox.Show("Форма для изменения данных о преступнике в архиве.");
+            MessageBox.Show("Для добавления преступника требуется указать хотя имя или фамилию или кличку.");
         }
     }
 }

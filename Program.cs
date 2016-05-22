@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Kurs.Forms.Criminal;
+using Kurs.Forms.Actual;
 
 namespace Kurs
 {

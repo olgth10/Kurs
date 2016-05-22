@@ -45,6 +45,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\Actual\AddCR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Actual\AddCR.Designer.cs">
+      <DependentUpon>AddCR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Actual\ArchiveCR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Actual\ArchiveCR.Designer.cs">
+      <DependentUpon>ArchiveCR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Actual\DeleteCR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Actual\DeleteCR.Designer.cs">
+      <DependentUpon>DeleteCR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Actual\EditCR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Actual\EditCR.Designer.cs">
+      <DependentUpon>EditCR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Actual\FindCR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Actual\FindCR.Designer.cs">
+      <DependentUpon>FindCR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Actual\ListCR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Actual\ListCR.Designer.cs">
+      <DependentUpon>ListCR.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Archive\ChangeInARCH.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,47 +111,29 @@
     <Compile Include="Forms\Archive\ToListCR.Designer.cs">
       <DependentUpon>ToListCR.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Criminal\AddCR.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Criminal\AddCR.Designer.cs">
-      <DependentUpon>AddCR.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Criminal\EditCR.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Criminal\EditCR.Designer.cs">
-      <DependentUpon>EditCR.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Criminal\FindCR.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Criminal\FindCR.Designer.cs">
-      <DependentUpon>FindCR.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Criminal\DeleteCR.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Criminal\DeleteCR.Designer.cs">
-      <DependentUpon>DeleteCR.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Criminal\ArchivCR.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Criminal\ArchivCR.Designer.cs">
-      <DependentUpon>ArchivCR.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Criminal\ListCR.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Criminal\ListCR.Designer.cs">
-      <DependentUpon>ListCR.cs</DependentUpon>
-    </Compile>
     <Compile Include="Models\Band.cs" />
     <Compile Include="Models\Criminal.cs" />
     <Compile Include="Models\Lists.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Actual\AddCR.resx">
+      <DependentUpon>AddCR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Actual\ArchiveCR.resx">
+      <DependentUpon>ArchiveCR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Actual\DeleteCR.resx">
+      <DependentUpon>DeleteCR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Actual\EditCR.resx">
+      <DependentUpon>EditCR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Actual\FindCR.resx">
+      <DependentUpon>FindCR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Actual\ListCR.resx">
+      <DependentUpon>ListCR.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Archive\ChangeInARCH.resx">
       <DependentUpon>ChangeInARCH.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,24 +148,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Archive\ToListCR.resx">
       <DependentUpon>ToListCR.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Criminal\AddCR.resx">
-      <DependentUpon>AddCR.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Criminal\ArchivCR.resx">
-      <DependentUpon>ArchivCR.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Criminal\DeleteCR.resx">
-      <DependentUpon>DeleteCR.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Criminal\EditCR.resx">
-      <DependentUpon>EditCR.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Criminal\FindCR.resx">
-      <DependentUpon>FindCR.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Criminal\ListCR.resx">
-      <DependentUpon>ListCR.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

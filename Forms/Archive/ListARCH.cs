@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Kurs.Models;
-using Kurs.Forms.Criminal;
 
 namespace Kurs.Forms.Archive
 {
@@ -21,8 +13,8 @@ namespace Kurs.Forms.Archive
 
         private void ListARCH_Load(object sender, EventArgs e)
         {
-            Lists ls = new Lists();
-            foreach (Models.Criminal cr in ls.arch)
+            Lists lists = new Lists();
+            foreach (Criminal cr in lists.ArchiveList)
             {
                 listBox1.Items.Add(cr.ToString());
             }
@@ -32,13 +24,13 @@ namespace Kurs.Forms.Archive
         {
             if (listBox1.SelectedIndex != -1)
             {
-                Lists ls = new Lists();
+                Lists lists = new Lists();
                 ChangeInARCH edit = new ChangeInARCH(listBox1.SelectedItem.ToString());
 
                 if (edit.ShowDialog() == DialogResult.OK)
                 {
                     listBox1.Items.Remove(listBox1.Items[listBox1.SelectedIndex]);
-                    listBox1.Items.Add(ls.ls[ls.ls.Count - 1].ToString());
+                    listBox1.Items.Add(lists.CriminalList[lists.CriminalList.Count - 1].ToString());
                 }
             }
             else
@@ -90,7 +82,7 @@ namespace Kurs.Forms.Archive
         {
             listBox1.Items.Clear();
             Lists l = new Lists();
-            foreach (Band b in l.lbarch)
+            foreach (Band b in l.BandsInArchiveList)
             {
                 if (b.name == "")
                 {
@@ -100,7 +92,7 @@ namespace Kurs.Forms.Archive
                 {
                     listBox1.Items.Add("Название банды: " + b.name);
                 }
-                foreach (Models.Criminal cr in b.ls)
+                foreach (Criminal cr in b.CriminalList)
                 {
                     listBox1.Items.Add(cr.ToString());
                 }
@@ -110,8 +102,8 @@ namespace Kurs.Forms.Archive
 
         private void button6_Click(object sender, EventArgs e)
         {
-            FindARCH fcr = new FindARCH();
-            Lists crl = new Lists();
+            FindInArchive fcr = new FindInArchive();
+            Lists lists = new Lists();
 
             if (fcr.ShowDialog() == DialogResult.OK)
             {
@@ -127,11 +119,11 @@ namespace Kurs.Forms.Archive
 
         private void button8_Click(object sender, EventArgs e)
         {
-            Lists crl = new Lists();
+            Lists lists = new Lists();
             listBox1.Items.Clear();
-            for (int i = 0; i < crl.arch.Count; i++)
+            for (int i = 0; i < lists.ArchiveList.Count; i++)
             {
-                listBox1.Items.Add(crl.arch[i].ToString());
+                listBox1.Items.Add(lists.ArchiveList[i].ToString());
             }
             button8.Visible = false;
         }        

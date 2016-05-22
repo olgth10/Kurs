@@ -20,13 +20,13 @@ namespace Kurs.Models
         public DateTime dob;
         public string pob;
         public string lastlocation;
-        public string languages;        
+        public string languages;
         public string professions;
         public string lastdeal;
         public string band;
 
         #region Конструктор
-        public Criminal(string name1,string surname1,string nickname1,double heigth1,string hair1,string eyes1,string signs1,string nationality1,DateTime dob1,string pob1, string lastlocation1, string languages1, string professions1,string lastdeal1,string band1)
+        public Criminal(string name1, string surname1, string nickname1, double heigth1, string hair1, string eyes1, string signs1, string nationality1, DateTime dob1, string pob1, string lastlocation1, string languages1, string professions1, string lastdeal1, string band1)
         {
             name = name1;
             surname = surname1;
@@ -56,7 +56,7 @@ namespace Kurs.Models
             XmlElement crim = doc.CreateElement("criminal");
             tag.InnerText = name;
             crim.AppendChild(tag);
-            
+
             tag = doc.CreateElement("surname");
             tag.InnerText = surname;
             crim.AppendChild(tag);
@@ -87,7 +87,7 @@ namespace Kurs.Models
             crim.AppendChild(tag);
 
             tag = doc.CreateElement("dob");
-            tag.InnerText = dob.ToString();
+            tag.InnerText = dob.ToShortDateString();
             crim.AppendChild(tag);
 
             tag = doc.CreateElement("pob");
@@ -128,14 +128,14 @@ namespace Kurs.Models
             doc1.Load(@"../../Data/Archive.xml");
             XmlNode root = doc.DocumentElement;
             XmlNode root1 = doc1.DocumentElement;
-            Lists crl = new Lists();
-            for (int i = 0; i < crl.ls.Count; i++)
+            Lists lists = new Lists();
+            for (int i = 0; i < lists.CriminalList.Count; i++)
             {
-                if (crl.ls[i].ToString() == this.ToString())
+                if (lists.CriminalList[i].ToString() == this.ToString())
                 {
                     XmlNode temp = doc1.ImportNode(root.ChildNodes[i], true);
-                    root1.AppendChild(temp);                    
-                    root.RemoveChild(root.ChildNodes[i]);                    
+                    root1.AppendChild(temp);
+                    root.RemoveChild(root.ChildNodes[i]);
                     break;
                 }
             }
@@ -153,10 +153,10 @@ namespace Kurs.Models
             doc1.Load(@"../../Data/Archive.xml");
             XmlNode root = doc.DocumentElement;
             XmlNode root1 = doc1.DocumentElement;
-            Lists crl = new Lists();
-            for (int i = 0; i < crl.arch.Count; i++)
+            Lists lists = new Lists();
+            for (int i = 0; i < lists.ArchiveList.Count; i++)
             {
-                if (crl.arch[i].ToString() == this.ToString())
+                if (lists.ArchiveList[i].ToString() == this.ToString())
                 {
                     XmlNode temp = doc.ImportNode(root1.ChildNodes[i], true);
                     root.AppendChild(temp);
@@ -184,16 +184,16 @@ namespace Kurs.Models
         public void Delete()
         {
             XmlDocument doc = new XmlDocument();
-            Lists crl = new Lists();
+            Lists lists = new Lists();
             doc.Load(@"../../Data/Criminals.xml");
             XmlNode root = doc.DocumentElement;
-            for (int i = 0; i < crl.ls.Count; i++)
+            for (int i = 0; i < lists.CriminalList.Count; i++)
             {
-                if (crl.ls[i].ToString() == ToString())
+                if (lists.CriminalList[i].ToString() == ToString())
                 {
                     root.RemoveChild(root.ChildNodes[i]);
                 }
-            }  
+            }
             doc.Save(@"../../Data/Criminals.xml");
         }
         #endregion
@@ -202,12 +202,12 @@ namespace Kurs.Models
         public void DeleteArch()
         {
             XmlDocument doc = new XmlDocument();
-            Lists crl = new Lists();
+            Lists lists = new Lists();
             doc.Load(@"../../Data/Archive.xml");
             XmlNode root = doc.DocumentElement;
-            for (int i = 0; i < crl.arch.Count; i++)
+            for (int i = 0; i < lists.ArchiveList.Count; i++)
             {
-                if (crl.arch[i].ToString() == ToString())
+                if (lists.ArchiveList[i].ToString() == ToString())
                 {
                     root.RemoveChild(root.ChildNodes[i]);
                     break;
@@ -219,7 +219,7 @@ namespace Kurs.Models
 
         public override string ToString()
         {
-            return $"Имя: {name}  Фамилия: {surname}   Кличка: {nickname} Рост: {heigth} м.  Цвет волос: {hair}   Цвет глаз: {eyes} Особые приметы: {signs}  Гражданство: {nationality}   Дата рождения: {dob} Место рождения: {pob} Последнее место: {lastlocation} Языки: {languages} Преступная профессия: {professions} Последнее дело: {lastdeal}";
+            return $"Имя: {name}  Фамилия: {surname}   Кличка: {nickname} Рост: {heigth} м.  Цвет волос: {hair}   Цвет глаз: {eyes} Особые приметы: {signs}  Гражданство: {nationality}   Дата рождения: {dob.ToShortDateString()} Место рождения: {pob} Последнее место: {lastlocation} Языки: {languages} Преступная профессия: {professions} Последнее дело: {lastdeal}";
         }
     }
 }

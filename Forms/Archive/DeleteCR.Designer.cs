@@ -73,6 +73,7 @@
             this.Controls.Add(this.button1);
             this.Name = "DeleteCR";
             this.Text = "Удаление преступника";
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.DeleteCR_HelpRequested);
             this.ResumeLayout(false);
 
         }

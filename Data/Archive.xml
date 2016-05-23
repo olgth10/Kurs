@@ -69,21 +69,4 @@
     <lastdeal>Разбойное нападение</lastdeal>
     <band>Речное братство</band>
   </criminal>
-  <criminal>
-    <name>Дмитрий</name>
-    <surname>Коровин</surname>
-    <nickname />
-    <height>1,9</height>
-    <hair>Тёмный</hair>
-    <eyes>Светлый</eyes>
-    <signs>Толстый</signs>
-    <nationality>Украина</nationality>
-    <dob>05.05.1967 21:06:45</dob>
-    <pob>Украина</pob>
-    <lastlocation />
-    <languages>Украинский</languages>
-    <professions>Убийца</professions>
-    <lastdeal>Заранее спланированное убийство</lastdeal>
-    <band />
-  </criminal>
 </archive>

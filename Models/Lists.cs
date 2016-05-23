@@ -131,7 +131,7 @@ namespace Kurs.Models
             List<Criminal> finded = new List<Criminal>();
             for (int i = 0; i < CriminalList.Count; i++)
             {
-                if (CriminalList[i].name.ToLower().Contains(cr.name.Trim(' ').ToLower()) && CriminalList[i].surname.ToLower().Contains(cr.surname.Trim(' ').ToLower()) && CriminalList[i].nickname.ToLower().Contains(cr.nickname.Trim(' ').ToLower()) && CriminalList[i].hair.ToLower().Contains(cr.hair.Trim(' ').ToLower()) && CriminalList[i].eyes.ToLower().Contains(cr.eyes.Trim(' ').ToLower()) && CriminalList[i].signs.ToLower().Contains(cr.signs.Trim(' ').ToLower()) && CriminalList[i].nationality.ToLower().Contains(cr.nationality.Trim(' ').ToLower()) && CriminalList[i].pob.ToLower().Contains(cr.pob.Trim(' ').ToLower()) && CriminalList[i].lastlocation.ToLower().Contains(cr.lastlocation.Trim(' ').ToLower()) && CriminalList[i].languages.ToLower().Contains(cr.languages.Trim(' ').ToLower()) && CriminalList[i].professions.ToLower().Contains(cr.professions.Trim(' ').ToLower()) && CriminalList[i].lastdeal.ToLower().Contains(cr.lastdeal.Trim(' ').ToLower()) && CriminalList[i].heigth.ToString().Contains(cr.heigth.ToString()) && (CriminalList[i].dob.Year==cr.dob.Year || CriminalList[i].dob.Month==cr.dob.Month || CriminalList[i].dob.Day==cr.dob.Day))
+                if (CriminalList[i] == cr)
                 {
                     finded.Add(CriminalList[i]);
                 }
@@ -146,7 +146,7 @@ namespace Kurs.Models
             List<Criminal> finded = new List<Criminal>();
             for (int i = 0; i < ArchiveList.Count; i++)
             {
-                if (ArchiveList[i].name.ToLower().Contains(cr.name.Trim(' ').ToLower()) && ArchiveList[i].surname.ToLower().Contains(cr.surname.Trim(' ').ToLower()) && ArchiveList[i].nickname.ToLower().Contains(cr.nickname.Trim(' ').ToLower()) && ArchiveList[i].hair.ToLower().Contains(cr.hair.Trim(' ').ToLower()) && ArchiveList[i].eyes.ToLower().Contains(cr.eyes.Trim(' ').ToLower()) && ArchiveList[i].signs.ToLower().Contains(cr.signs.Trim(' ').ToLower()) && ArchiveList[i].nationality.ToLower().Contains(cr.nationality.Trim(' ').ToLower()) && ArchiveList[i].pob.ToLower().Contains(cr.pob.Trim(' ').ToLower()) && ArchiveList[i].lastlocation.ToLower().Contains(cr.lastlocation.Trim(' ').ToLower()) && ArchiveList[i].languages.ToLower().Contains(cr.languages.Trim(' ').ToLower()) && ArchiveList[i].professions.ToLower().Contains(cr.professions.Trim(' ').ToLower()) && ArchiveList[i].lastdeal.ToLower().Contains(cr.lastdeal.Trim(' ').ToLower()))
+                if (ArchiveList[i]==cr)
                 {
                     finded.Add(ArchiveList[i]);
                 }

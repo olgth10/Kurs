@@ -1,27 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <criminals>
   <criminal>
-    <name>Сергей</name>
-    <surname>Бровко</surname>
-    <nickname>
-    </nickname>
-    <height>1,65</height>
-    <hair>Тёмный</hair>
-    <eyes>Голубой</eyes>
-    <signs>
-    </signs>
-    <nationality>Украина</nationality>
-    <dob>30.06.1963 23:06:22</dob>
-    <pob>Днепропетровск, Украина</pob>
-    <lastlocation>
-    </lastlocation>
-    <languages>Украинский</languages>
-    <professions>
-    </professions>
-    <lastdeal>Нанесение тяжких телесных повреждений</lastdeal>
-    <band>Речное братство</band>
-  </criminal>
-  <criminal>
     <name>Роман</name>
     <surname>Решетник</surname>
     <nickname>
@@ -64,6 +43,44 @@
     <professions>Мошенник</professions>
     <lastdeal>
     </lastdeal>
+    <band>Речное братство</band>
+  </criminal>
+  <criminal>
+    <name>Дмитрий</name>
+    <surname>Коровин</surname>
+    <nickname />
+    <height>1,9</height>
+    <hair>Тёмный</hair>
+    <eyes>Светлый</eyes>
+    <signs>Толстый</signs>
+    <nationality>Украина</nationality>
+    <dob>05.05.1967 21:06:45</dob>
+    <pob>Украина</pob>
+    <lastlocation />
+    <languages>Украинский</languages>
+    <professions>Убийца</professions>
+    <lastdeal>Заранее спланированное убийство</lastdeal>
+    <band />
+  </criminal>
+  <criminal>
+    <name>Сергей</name>
+    <surname>Бровко</surname>
+    <nickname>
+    </nickname>
+    <height>1,65</height>
+    <hair>Тёмный</hair>
+    <eyes>Голубой</eyes>
+    <signs>
+    </signs>
+    <nationality>Украина</nationality>
+    <dob>30.06.1963</dob>
+    <pob>Днепропетровск, Украина</pob>
+    <lastlocation>
+    </lastlocation>
+    <languages>Украинский</languages>
+    <professions>
+    </professions>
+    <lastdeal>Нанесение тяжких телесных повреждений</lastdeal>
     <band>Речное братство</band>
   </criminal>
 </criminals>

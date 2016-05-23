@@ -81,6 +81,7 @@ namespace Kurs.Forms.Actual
                     listBox1.Items.Add(fcr.fn[i].ToString());
                 }
                 button8.Visible = true;
+                button8.Text = "Показать всех преступников";
             }
         }
 
@@ -104,6 +105,7 @@ namespace Kurs.Forms.Actual
                 }
             }
             button8.Visible = true;
+            button8.Text = "Показать список преступников";
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -135,6 +137,7 @@ namespace Kurs.Forms.Actual
                 {
                     listBox1.Items.Add(lists.CriminalList[i].ToString());
                 }
+                button8.Hide();
             }
             else
             {
@@ -145,6 +148,7 @@ namespace Kurs.Forms.Actual
                 {
                     listBox1.Items.Add(lists.CriminalList[i].ToString());
                 }
+                button8.Hide();
             }
         }
 
@@ -161,7 +165,14 @@ namespace Kurs.Forms.Actual
 
         private void ListCR_HelpRequested(object sender, HelpEventArgs hlpevent)
         {
-            MessageBox.Show("Здесь Вы можете добавлять, редактировать, удалять и искать преступников, просматривать список банд, а также просматривать архив преступников. Все эти действия осуществляются нажатием кнопок на данной форме. Дополнительную информацию и помощь вы можете получить на формах действий с преступниками");
+            MessageBox.Show("Здесь Вы можете добавлять, редактировать, удалять и искать преступников, просматривать список банд, а также просматривать архив преступников.Все действия осуществляются нажатием кнопок на данной форме. Для изменения, удаления и переноса в архив преступника необходимо выбрать его в списке, а затем нажать нужную кнопку.  Дополнительную информацию и помощь вы можете получить на формах действий с преступниками.");
         }
+
+        private void listBox1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            Lists lists = new Lists();
+            MessageBox.Show(lists.CriminalList[lists.FindIndex(listBox1.SelectedItem.ToString())].ToString());
+        }
+
     }
 }

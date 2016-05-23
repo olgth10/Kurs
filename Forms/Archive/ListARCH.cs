@@ -126,6 +126,12 @@ namespace Kurs.Forms.Archive
                 listBox1.Items.Add(lists.ArchiveList[i].ToString());
             }
             button8.Visible = false;
-        }        
+        }
+
+        private void listBox1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            Lists lists = new Lists();
+            MessageBox.Show(lists.ArchiveList[lists.FindIndexArch(listBox1.SelectedItem.ToString())].ToString());
+        }
     }
 }

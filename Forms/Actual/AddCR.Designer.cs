@@ -98,7 +98,7 @@
             this.menu2.Location = new System.Drawing.Point(220, 139);
             this.menu2.Name = "menu2";
             this.menu2.Size = new System.Drawing.Size(170, 27);
-            this.menu2.TabIndex = 75;
+            this.menu2.TabIndex = 6;
             this.menu2.Text = "menuStrip2";
             // 
             // toolStripComboBox2
@@ -115,7 +115,7 @@
             this.dateTimePicker1.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 78;
+            this.dateTimePicker1.TabIndex = 9;
             this.dateTimePicker1.Value = new System.DateTime(2016, 5, 22, 0, 0, 0, 0);
             // 
             // label15
@@ -148,7 +148,7 @@
             0});
             this.heigth.Name = "heigth";
             this.heigth.Size = new System.Drawing.Size(73, 20);
-            this.heigth.TabIndex = 73;
+            this.heigth.TabIndex = 4;
             this.heigth.Value = new decimal(new int[] {
             1,
             0,
@@ -157,10 +157,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(146, 438);
+            this.button1.Location = new System.Drawing.Point(148, 436);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(126, 52);
-            this.button1.TabIndex = 94;
+            this.button1.TabIndex = 16;
             this.button1.Text = "Добавить преступника";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -170,14 +170,14 @@
             this.lastdeal.Location = new System.Drawing.Point(220, 376);
             this.lastdeal.Name = "lastdeal";
             this.lastdeal.Size = new System.Drawing.Size(170, 20);
-            this.lastdeal.TabIndex = 86;
+            this.lastdeal.TabIndex = 14;
             // 
             // signs
             // 
             this.signs.Location = new System.Drawing.Point(220, 170);
             this.signs.Name = "signs";
             this.signs.Size = new System.Drawing.Size(170, 20);
-            this.signs.TabIndex = 76;
+            this.signs.TabIndex = 7;
             // 
             // label14
             // 
@@ -289,7 +289,7 @@
             this.menu1.Name = "menu1";
             this.menu1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
             this.menu1.Size = new System.Drawing.Size(170, 27);
-            this.menu1.TabIndex = 74;
+            this.menu1.TabIndex = 5;
             this.menu1.Text = "menuStrip1";
             // 
             // toolStripComboBox1
@@ -307,7 +307,7 @@
             this.menu3.Location = new System.Drawing.Point(220, 189);
             this.menu3.Name = "menu3";
             this.menu3.Size = new System.Drawing.Size(170, 27);
-            this.menu3.TabIndex = 77;
+            this.menu3.TabIndex = 8;
             this.menu3.Text = "menuStrip3";
             // 
             // toolStripComboBox3
@@ -325,7 +325,7 @@
             this.menu4.Location = new System.Drawing.Point(220, 250);
             this.menu4.Name = "menu4";
             this.menu4.Size = new System.Drawing.Size(170, 27);
-            this.menu4.TabIndex = 80;
+            this.menu4.TabIndex = 10;
             this.menu4.Text = "menuStrip4";
             // 
             // toolStripComboBox4
@@ -343,7 +343,7 @@
             this.menu5.Location = new System.Drawing.Point(220, 280);
             this.menu5.Name = "menu5";
             this.menu5.Size = new System.Drawing.Size(170, 27);
-            this.menu5.TabIndex = 81;
+            this.menu5.TabIndex = 11;
             this.menu5.Text = "menuStrip5";
             // 
             // toolStripComboBox5
@@ -361,7 +361,7 @@
             this.menu6.Location = new System.Drawing.Point(220, 310);
             this.menu6.Name = "menu6";
             this.menu6.Size = new System.Drawing.Size(170, 27);
-            this.menu6.TabIndex = 83;
+            this.menu6.TabIndex = 12;
             this.menu6.Text = "menuStrip6";
             // 
             // toolStripComboBox6
@@ -379,7 +379,7 @@
             this.menu7.Location = new System.Drawing.Point(220, 340);
             this.menu7.Name = "menu7";
             this.menu7.Size = new System.Drawing.Size(170, 27);
-            this.menu7.TabIndex = 84;
+            this.menu7.TabIndex = 13;
             this.menu7.Text = "menuStrip7";
             // 
             // toolStripComboBox7
@@ -396,7 +396,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(220, 403);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(131, 27);
-            this.menuStrip1.TabIndex = 97;
+            this.menuStrip1.TabIndex = 15;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // toolStripComboBox8
@@ -409,21 +409,21 @@
             this.nickname.Location = new System.Drawing.Point(220, 62);
             this.nickname.Name = "nickname";
             this.nickname.Size = new System.Drawing.Size(170, 20);
-            this.nickname.TabIndex = 71;
+            this.nickname.TabIndex = 3;
             // 
             // surname
             // 
             this.surname.Location = new System.Drawing.Point(220, 37);
             this.surname.Name = "surname";
             this.surname.Size = new System.Drawing.Size(170, 20);
-            this.surname.TabIndex = 69;
+            this.surname.TabIndex = 2;
             // 
             // name
             // 
             this.name.Location = new System.Drawing.Point(220, 12);
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(170, 20);
-            this.name.TabIndex = 68;
+            this.name.TabIndex = 1;
             // 
             // label4
             // 
@@ -503,7 +503,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "AddCR";
-            this.Text = "Доавбление преступника";
+            this.Text = "Добавление преступника";
             this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.AddCR_HelpRequested);
             this.menu2.ResumeLayout(false);
             this.menu2.PerformLayout();

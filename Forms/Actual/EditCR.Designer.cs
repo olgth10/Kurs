@@ -132,7 +132,7 @@
             this.dateTimePicker1.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 76;
+            this.dateTimePicker1.TabIndex = 6;
             this.dateTimePicker1.Value = new System.DateTime(2016, 5, 22, 0, 0, 0, 0);
             // 
             // label15
@@ -165,7 +165,7 @@
             0});
             this.heigth.Name = "heigth";
             this.heigth.Size = new System.Drawing.Size(73, 20);
-            this.heigth.TabIndex = 71;
+            this.heigth.TabIndex = 4;
             this.heigth.Value = new decimal(new int[] {
             1,
             0,
@@ -174,10 +174,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(155, 444);
+            this.button1.Location = new System.Drawing.Point(151, 438);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(126, 50);
-            this.button1.TabIndex = 92;
+            this.button1.TabIndex = 8;
             this.button1.Text = "Изменить преступника";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -187,14 +187,14 @@
             this.lastdeal.Location = new System.Drawing.Point(220, 372);
             this.lastdeal.Name = "lastdeal";
             this.lastdeal.Size = new System.Drawing.Size(170, 20);
-            this.lastdeal.TabIndex = 85;
+            this.lastdeal.TabIndex = 7;
             // 
             // signs
             // 
             this.signs.Location = new System.Drawing.Point(220, 166);
             this.signs.Name = "signs";
             this.signs.Size = new System.Drawing.Size(170, 20);
-            this.signs.TabIndex = 74;
+            this.signs.TabIndex = 5;
             // 
             // label14
             // 
@@ -306,7 +306,7 @@
             this.menu1.Name = "menu1";
             this.menu1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
             this.menu1.Size = new System.Drawing.Size(170, 25);
-            this.menu1.TabIndex = 72;
+            this.menu1.TabIndex = 5;
             this.menu1.Text = "menuStrip1";
             // 
             // toolStripComboBox1
@@ -410,21 +410,21 @@
             this.nickname.Location = new System.Drawing.Point(220, 58);
             this.nickname.Name = "nickname";
             this.nickname.Size = new System.Drawing.Size(170, 20);
-            this.nickname.TabIndex = 70;
+            this.nickname.TabIndex = 3;
             // 
             // surname
             // 
             this.surname.Location = new System.Drawing.Point(220, 33);
             this.surname.Name = "surname";
             this.surname.Size = new System.Drawing.Size(170, 20);
-            this.surname.TabIndex = 68;
+            this.surname.TabIndex = 2;
             // 
             // name
             // 
             this.name.Location = new System.Drawing.Point(220, 8);
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(170, 20);
-            this.name.TabIndex = 65;
+            this.name.TabIndex = 1;
             // 
             // label4
             // 

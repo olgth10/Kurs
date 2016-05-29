@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml;
 
 namespace Kurs.Models
@@ -26,7 +22,10 @@ namespace Kurs.Models
         public string band;
 
         #region Конструктор
-        public Criminal(string name1, string surname1, string nickname1, double heigth1, string hair1, string eyes1, string signs1, string nationality1, DateTime dob1, string pob1, string lastlocation1, string languages1, string professions1, string lastdeal1, string band1)
+        public Criminal(string name1, string surname1, string nickname1, 
+             double heigth1, string hair1, string eyes1, string signs1, 
+             string nationality1, DateTime dob1, string pob1, string lastlocation1, 
+             string languages1, string professions1, string lastdeal1, string band1)
         {
             name = name1;
             surname = surname1;
@@ -156,7 +155,7 @@ namespace Kurs.Models
             Lists lists = new Lists();
             for (int i = 0; i < lists.ArchiveList.Count; i++)
             {
-                if (lists.ArchiveList[i].ToString() == this.ToString())
+                if (lists.ArchiveList[i].ToString() == ToString())
                 {
                     XmlNode temp = doc.ImportNode(root1.ChildNodes[i], true);
                     root.AppendChild(temp);
@@ -217,29 +216,62 @@ namespace Kurs.Models
         }
         #endregion
 
-        #region Переопределние метода ToString();
+        #region Переопределение метода ToString();
         public override string ToString()
         {
-            return $"Имя: {name}  Фамилия: {surname}   Кличка: {nickname} Рост: {heigth} м.  Цвет волос: {hair}   Цвет глаз: {eyes} Особые приметы: {signs}  Гражданство: {nationality}   Дата рождения: {dob.ToShortDateString()} Место рождения: {pob} Последнее место: {lastlocation} Языки: {languages} Преступная профессия: {professions} Последнее дело: {lastdeal}";
+            return $"Имя: {name}  Фамилия: {surname}   Кличка: {nickname}"
+                + $"Рост: {heigth} м.  Цвет волос: {hair}   Цвет глаз: {eyes}"
+                + $"Особые приметы: {signs}  Гражданство: {nationality}"
+                + $"Дата рождения: {dob.ToShortDateString()} Место рождения: {pob}"
+                + $"Последнее место: {lastlocation} Языки: {languages}"
+                + $"Преступная профессия: {professions} Последнее дело: {lastdeal}";
         }
         #endregion
 
         #region Переопределение операторов
         public static bool operator ==(Criminal c1, Criminal c2)
         {
-            if (c1.name.ToLower().Contains(c2.name.Trim(' ').ToLower()) && c1.surname.ToLower().Contains(c2.surname.Trim(' ').ToLower()) && c1.nickname.ToLower().Contains(c2.nickname.Trim(' ').ToLower()) && c1.hair.ToLower().Contains(c2.hair.Trim(' ').ToLower()) && c1.eyes.ToLower().Contains(c2.eyes.Trim(' ').ToLower()) && c1.signs.ToLower().Contains(c2.signs.Trim(' ').ToLower()) && c1.nationality.ToLower().Contains(c2.nationality.Trim(' ').ToLower()) && c1.pob.ToLower().Contains(c2.pob.Trim(' ').ToLower()) && c1.lastlocation.ToLower().Contains(c2.lastlocation.Trim(' ').ToLower()) && c1.languages.ToLower().Contains(c2.languages.Trim(' ').ToLower()) && c1.professions.ToLower().Contains(c2.professions.Trim(' ').ToLower()) && c1.lastdeal.ToLower().Contains(c2.lastdeal.Trim(' ').ToLower()) && c1.heigth.ToString().Contains(c2.heigth.ToString()) && ((c1.dob.Year == c2.dob.Year || c1.dob.Month == c2.dob.Month || c1.dob.Day == c2.dob.Day) || (c2.dob.ToShortDateString() == "22.05.2016")))
-            {
-                return true;
-            }
+            if (c1.name.ToLower().Contains(c2.name.Trim(' ').ToLower()) && 
+                c1.surname.ToLower().Contains(c2.surname.Trim(' ').ToLower()) 
+                && c1.nickname.ToLower().Contains(c2.nickname.Trim(' ').ToLower()) 
+                && c1.hair.ToLower().Contains(c2.hair.Trim(' ').ToLower()) 
+                && c1.eyes.ToLower().Contains(c2.eyes.Trim(' ').ToLower()) 
+                && c1.signs.ToLower().Contains(c2.signs.Trim(' ').ToLower()) 
+                && c1.nationality.ToLower().Contains(c2.nationality.Trim(' ').ToLower()) 
+                && c1.pob.ToLower().Contains(c2.pob.Trim(' ').ToLower()) 
+                && c1.lastlocation.ToLower().Contains(c2.lastlocation.Trim(' ').ToLower()) 
+                && c1.languages.ToLower().Contains(c2.languages.Trim(' ').ToLower()) 
+                && c1.professions.ToLower().Contains(c2.professions.Trim(' ').ToLower()) 
+                && c1.lastdeal.ToLower().Contains(c2.lastdeal.Trim(' ').ToLower()) 
+                && c1.heigth.ToString().Contains(c2.heigth.ToString()) 
+                && ((c1.dob.Year == c2.dob.Year || c1.dob.Month == c2.dob.Month || c1.dob.Day == c2.dob.Day) 
+                || (c2.dob.ToShortDateString() == "22.05.2016")))
+                {
+                    return true;
+                }
             return false;
         }
 
         public static bool operator !=(Criminal c1, Criminal c2)
         {
-            if (c1.name.ToLower().Contains(c2.name.Trim(' ').ToLower()) && c1.surname.ToLower().Contains(c2.surname.Trim(' ').ToLower()) && c1.nickname.ToLower().Contains(c2.nickname.Trim(' ').ToLower()) && c1.hair.ToLower().Contains(c2.hair.Trim(' ').ToLower()) && c1.eyes.ToLower().Contains(c2.eyes.Trim(' ').ToLower()) && c1.signs.ToLower().Contains(c2.signs.Trim(' ').ToLower()) && c1.nationality.ToLower().Contains(c2.nationality.Trim(' ').ToLower()) && c1.pob.ToLower().Contains(c2.pob.Trim(' ').ToLower()) && c1.lastlocation.ToLower().Contains(c2.lastlocation.Trim(' ').ToLower()) && c1.languages.ToLower().Contains(c2.languages.Trim(' ').ToLower()) && c1.professions.ToLower().Contains(c2.professions.Trim(' ').ToLower()) && c1.lastdeal.ToLower().Contains(c2.lastdeal.Trim(' ').ToLower()) && c1.heigth.ToString().Contains(c2.heigth.ToString()) && ((c1.dob.Year == c2.dob.Year || c1.dob.Month == c2.dob.Month || c1.dob.Day == c2.dob.Day) || (c2.dob.ToShortDateString() == "22.05.2016")))
-            {
-                return false;
-            }
+            if (c1.name.ToLower().Contains(c2.name.Trim(' ').ToLower()) 
+                && c1.surname.ToLower().Contains(c2.surname.Trim(' ').ToLower()) 
+                && c1.nickname.ToLower().Contains(c2.nickname.Trim(' ').ToLower()) 
+                && c1.hair.ToLower().Contains(c2.hair.Trim(' ').ToLower()) 
+                && c1.eyes.ToLower().Contains(c2.eyes.Trim(' ').ToLower()) 
+                && c1.signs.ToLower().Contains(c2.signs.Trim(' ').ToLower()) 
+                && c1.nationality.ToLower().Contains(c2.nationality.Trim(' ').ToLower()) 
+                && c1.pob.ToLower().Contains(c2.pob.Trim(' ').ToLower()) 
+                && c1.lastlocation.ToLower().Contains(c2.lastlocation.Trim(' ').ToLower()) 
+                && c1.languages.ToLower().Contains(c2.languages.Trim(' ').ToLower()) 
+                && c1.professions.ToLower().Contains(c2.professions.Trim(' ').ToLower()) 
+                && c1.lastdeal.ToLower().Contains(c2.lastdeal.Trim(' ').ToLower())
+                && c1.heigth.ToString().Contains(c2.heigth.ToString()) 
+                && ((c1.dob.Year == c2.dob.Year || c1.dob.Month == c2.dob.Month || c1.dob.Day == c2.dob.Day) 
+                || (c2.dob.ToShortDateString() == "22.05.2016")))
+                {
+                    return false;
+                }
             return true;
         }
         #endregion
